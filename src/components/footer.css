@@ -1,3 +1,130 @@
 .head{
     font-size: 2rem;
 }
+
+/* Footer styling*/
+.f-container{
+    position: absolute;
+width: 1440px;
+height: 551px;
+left: 0px;
+top: 1170px;
+background: #FFFFFF;
+
+}
+
+.f-box{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.f-image{
+    position: absolute;
+width: 90px;
+height: 61px;
+left: 210px;
+top: 202px;
+mix-blend-mode: darken;
+}
+
+.f-head1{
+    position: absolute;
+width: 53px;
+height: 19px;
+left: 420px;
+top: 104px;
+
+font-family: 'Garamond-Bold';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 19px;
+
+
+
+color: #111111;
+
+}
+.f-head2{
+    
+position: absolute;
+width: 76px;
+height: 19px;
+left: 628px;
+top: 104px;
+
+font-family: 'Garamond-Bold';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 19px;
+}
+
+.f-head3{
+    position: absolute;
+width: 73px;
+height: 19px;
+left: 940px;
+top: 104px;
+
+font-family: 'Garamond-Bold';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 19px;
+}
+
+.f-m-list{
+    position: absolute;
+width: 40px;
+height: 18px;
+left: 420px;
+top: 139px;
+list-style-type: none; 
+font-family: 'Garamond';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 18px;
+/* identical to box height */
+margin-left: -40px;
+
+color: #000000;
+
+}
+
+.f-a-list{
+    padding-top: 10px;
+    position: absolute;
+width: 181px;
+height: 54px;
+left: 631px;
+top: 135px;
+list-style-type: none; 
+font-family: 'Garamond';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 18px;
+margin-left: -40px;
+color: #000000;
+
+}
+
+.f-c-list{
+    padding-top: 10px;
+    
+    position: absolute;
+width: 41px;
+height: 18px;
+left: 940px;
+top: 135px;
+list-style-type: none; 
+font-family: 'Garamond';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 18px;
+margin-left: -40px;
+}
