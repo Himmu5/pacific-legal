@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+button{
+    border: none;
+    background-color: #111111;
+    border-radius: 0.2rem;
+    color: white;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}

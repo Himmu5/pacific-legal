@@ -1,0 +1,38 @@
+.home-header {
+    overflow: hidden;
+    position: relative;
+    height: 45rem;
+    width: 100%;
+  }
+  
+
+  .dawn-bg {
+    /* opacity: 0.9; */
+    mix-blend-mode: overlay;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .header-content {
+    position: relative;
+    height: 45rem;
+    width: 100%;
+  }
+  
+
+  h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 0px 4px 38px rgba(0, 0, 0, 0.25);
+  }
+
+  .col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 45rem;
+    padding-left: 5rem;
+  }
