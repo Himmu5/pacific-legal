@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
+
+
+
+
+.bcardtile{
+    width: 392px;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tileimg{
+    width: 392px;
+    height: 260px;
+}
+.bcardbox{
+    margin-top:262px;
+    width: 392px;
+    height: 160px;
+    background: #FFFFFF;
+border-radius: 0px 0px 10px 10px;
+}
+.bcardtitle{
+text-align: start;
+padding: 1rem 1rem;
+font-size: 22px;
+line-height: 30px;
+width: 330px;
+font-weight: bold;
+font-family: 'EB Garamond', serif;
+    font-style: normal;
+}
+
+.bcardauthor{
+    padding: 1rem 1rem;
+   
+    width: 50px;
+    height:50px;
+}
+
+.bd-box{
+    display: flex;
+    flex-direction: row;
+    margin-top: -42px;
+    
+}
+
+.bnt-box{
+    margin-top: -6px;
+    margin-left: -6px;
+}
+.bcardname{
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 158%;
+font-feature-settings: 'rtla' on, 'liga' off;
+color: #000000;
+margin-bottom:-5px;
+}
+
+
+.bcarddetail{
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 158%;
+color: #000000;
+}
+
+
+.bcard-tiles{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+}
