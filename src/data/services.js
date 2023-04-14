@@ -1,5 +1,5 @@
 var data = {
-  "gencorpadv": {
+  "general-corporate-advisory": {
     "title": "General Corporate Advisory",
     "subtitle": "Pacific Legal takes great pride in representing clients at all stages of their business cycle, and offer legal and strategic advice to our clients and structure, negotiate and implement all manner of business transactions on their behalf, such as:",
     "points": [
