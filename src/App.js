@@ -6,7 +6,7 @@ import Practices from './pages/Practices';
 import SingleServuce from './pages/SingleService';
 import Hero from './components/Hero/Hero.jsx';
 import Services from './pages/Services';
-
+import Blog from './pages/Blog';
 function App() {
   return (
    <BrowserRouter>
@@ -16,6 +16,7 @@ function App() {
             <Route path="/practices" element = {<Practices />}/>
             <Route path="/services" element = {<Services/>}/>
             <Route path="/singleservice" element = {<SingleServuce />}/>
+            <Route path="/blog" element={<Blog/>}/>
           </Routes>
    </BrowserRouter>
 
