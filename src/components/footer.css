@@ -2,7 +2,7 @@
 
 /* Footer styling*/
 .f-container{
-    position: absolute;
+    position:sticky;
 width: 100%;
 height: 551px;
 left: 0px;
