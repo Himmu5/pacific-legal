@@ -18,10 +18,3 @@ color: white;
 width: 240px;
 }
 
-.areas-tiles{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 5rem;
-    margin-bottom: 7rem;
-}

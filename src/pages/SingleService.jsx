@@ -2,6 +2,9 @@ import Hero from "../components/Hero/Hero";
 import corpbg from "../assets/corporate-advisory-bg.png";
 import CTAButton from "../components/CTAButton/CTAButton";
 import "./SingleService.css";
+import data from "../data/services";
+import Navbar from "../components/Navbar/Navbar";
+import { useEffect, useState } from "react";
 function SingleService() {
   const subtitle =
     "Pacific Legal takes great pride in representing clients at all stages of their business cycle, and offer legal and strategic advice to our clients and structure, negotiate and implement all manner of business transactions on their behalf, such as:";
@@ -22,25 +25,44 @@ function SingleService() {
     "Supply, licensing, distribution, and outsourcing arrangements and other commercial agreements"
   ];
 
-  var pointsList = points.map(function (point) {
+  const [textData, setTextData] = useState(null);
+
+  const [pointsList, setPointsList] = useState(null);
+
+  useEffect(() => {
+    var service = window.location.search.split('?')[1];
+if(data[service]!=null){
+  setTextData(data[service])
+
+  setPointsList(data[service]["points"].map(function (point) {
     return <li key={point}>{point}</li>;
-  });
+  }))
+}
+      }, [] );
+    
 
   return (
     <>
-      <Hero title="General Corporate Advisory" />
+    <Navbar/>
+      
 
-      <div className="single-service-content">
+      {
+        textData==null?<div className="nodata"><p>No Data Found</p></div>:
+        <>
+        <Hero title={textData["title"]}/>
+        <div className="single-service-content">
         <img src={corpbg} alt="" className="corpbg-img" />
 
-        <h2 className="service-title">General Corporate Advisory</h2>
-        <p className="service-subtitle">{subtitle}</p>
+        <h2 className="service-title">{textData["title"]}</h2>
+        <p className="service-subtitle">{textData["subtitle"]}</p>
 
         <ul>{pointsList}</ul>
         <div className="consultation">
             <CTAButton title="Book your consultation" handleClick = {()=>{console.log("consultation button clicked")}}/>
         </div>
       </div>
+        </>
+      }
     </>
   );
 }

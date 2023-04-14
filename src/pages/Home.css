@@ -1,7 +1,7 @@
 .home-header {
     overflow: hidden;
     position: relative;
-    height: 45rem;
+    height: 40rem;
     width: 100%;
   }
   
@@ -20,19 +20,211 @@
     position: relative;
     height: 45rem;
     width: 100%;
+    display: flex;
+    flex-direction: row;
   }
   
 
-  h1{
-    font-size: 3rem;
+  .h1{
+    font-size: 4rem;
+    max-width: 40rem;
     font-weight: 900;
     text-shadow: 0px 4px 38px rgba(0, 0, 0, 0.25);
+  }
+
+  .company-subtitle{
+    max-width: 40rem;
+    margin-top: -2rem;
   }
 
   .col1{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 45rem;
+    height: 40rem;
     padding-left: 5rem;
   }
+
+  .whoarewe{
+    text-align: center;
+    padding: 7rem;
+    background-color: #FFEFCC;
+  }
+
+  
+  .services-header-title{
+    text-align: center;
+  }
+
+  .services{
+    
+    padding: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .col2{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 60%;
+    height: 40rem;
+  }
+
+  .justice{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .getintouch{
+    height: 100vh;
+  }
+
+
+  .services-tiles-parent{
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 2rem;
+grid-auto-rows: auto;
+  }
+
+  .features{
+    height: 35rem;
+    background-color: white;
+    background-image: url("../assets/feature-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .clients{
+    background-color: #FFEFCC;
+    overflow: hidden;
+    position: relative;
+    height: 40rem;
+    width: 100%;
+  }
+
+  .client-content{
+    position: relative;
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .getintouch{
+    height: 100vh;
+    background-image: url("../assets/justice-faded.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .getintouch-form{
+    padding: 4rem;
+    /* width: 60rem; */
+    min-height: 10rem;
+    border-radius: 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+  }
+
+  input{
+    height: 3rem;
+    background-color: #F0F0F0;
+    border: none;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    width: 50rem;
+  }
+
+  
+@media only screen and (max-width: 600px) {
+  .header-content {
+    position: relative;
+    height: 35rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .col1{
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    padding-left: 0rem;
+    width: 80vw;
+  }
+  .col2{
+    display: none;
+  }
+  .whoarewe{
+    text-align: center;
+    padding: 2rem;
+    background-color: #FFEFCC;
+  }
+  .services{
+    
+    padding: 2rem;
+  }
+  .services-tiles-parent{
+    display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 2rem;
+grid-auto-rows: auto;
+  }
+  .features{
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: fit-content;
+    background-color: white;
+    background-image: url("../assets/feature-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  input{
+    height: 3rem;
+    background-color: #F0F0F0;
+    border: none;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    width: 20rem;
+  }
+  .getintouch-form{
+    padding: 2rem;
+    /* width: 60rem; */
+    min-height: 10rem;
+    border-radius: 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+  }
+  .getintouch-header{
+    max-width: 80vw;
+    text-align: center;
+  }
+}

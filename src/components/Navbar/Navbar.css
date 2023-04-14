@@ -1,44 +1,90 @@
-.navbar {
+.logo{
+  width: 4rem;
+}
+
+.companytitle{
+  font-family: 'EB Garamond', serif;
+font-size: 1.4rem;
+}
+
+.nav-r1-c-all{
+  padding-top: 0rem;
+padding-right: 3rem;
+padding-left: 5rem;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.nav-r1-c1{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.li{
+  text-decoration: none;
+  list-style-type: none
+}
+
+a{
+  text-decoration: none;
+  color: #111111;
+
+}
+
+a:visited{
+  color: #111111;
+}
+
+.items{
+  display: flex;
+  padding-left: 5.3rem;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.items-desktop{
+  display: flex;
+  padding-left: 5.3rem;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.menu{
+  width: 3rem;
+  display: none;
+}
+
+.right-content{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .items{
     display: flex;
+    padding-left: 2rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .items-desktop{
+    display: none;
+    padding-left: 2rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .nav-r1-c-all{
+    padding-top: 0rem;
+  padding-right: 1rem;
+  padding-left: 0.2rem;
     justify-content: space-between;
+    display: flex;
     align-items: center;
-    background-color: #33333336;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px;
   }
-  
-  .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    list-style: none;
+  .menu{
+    width: 3rem;
+    display: block;
   }
-  
-  .nav-item {
-    margin-right: 20px;
-  }
-  
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: #f4f4f4;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav-item {
-      margin: 10px 0;
-    }
-  }
-  
+}

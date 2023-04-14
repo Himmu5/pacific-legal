@@ -1,0 +1,25 @@
+.servicetile{
+    width: 350px;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    
+}
+
+
+.servicetitle{
+text-align: start;
+padding: 2rem 2rem;
+font-size: 1.5rem;
+color: white;
+width: 310px;
+}
+
+
+.learn-more{
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
