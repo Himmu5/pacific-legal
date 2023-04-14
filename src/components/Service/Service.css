@@ -12,7 +12,9 @@
 
 .servicetitle{
 text-align: start;
-padding: 2rem 2rem;
+padding-left: 2rem;
+padding-top: 2rem;
+/* padding: 2rem 2rem; */
 font-size: 1.5rem;
 color: white;
 width: 310px;
