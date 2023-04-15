@@ -17,6 +17,7 @@ import feature2 from "../assets/hammer.png";
 import feature3 from "../assets/case.png";
 import feature4 from "../assets/client.png";
 import ClientCarousel from "../components/ClientCarousel/ClientCarousel";
+import Footer from "../components/footer";
 
 function Home() {
   const whoarewe =
@@ -104,6 +105,7 @@ function Home() {
 <CTAButton title="Submit" handleClick={()=>console.log("nothing")}/>
       </div>
       </div>
+      <Footer/>
     </>
   );
 }
