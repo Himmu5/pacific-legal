@@ -3,6 +3,7 @@ import Fimage from '../assets/footerimage.png';
 import Fface from '../assets/footerfacebook.png';
 import Finsta from '../assets/footerinsta.png';
 import Flinkd from '../assets/footerlinkedin.png';
+import {  Link } from "react-router-dom";
 
 function Footer(){
     return(
@@ -16,13 +17,13 @@ function Footer(){
             <div className='f-menu'>
                 <h3 className='f-head'>Menu</h3>
                 <ul className='f-list'>
-                    <li>Home</li> <br/>
-                    <li>Blog</li><br/>
-                    <li>About</li><br/>
-                    <li>The Team</li><br/>
-                    <li>Practices</li><br/>
-                    <li>Services</li><br/>
-                    <li>Contact Us</li><br/>
+                    <li><Link to="/" >Home</Link></li> <br/>
+                    <li><Link to="/blog" >Blog</Link></li><br/>
+                    <li><Link to="/about" >About</Link></li><br/>
+                    <li><Link to="/team" >The Team</Link></li><br/>
+                    <li><Link to="/practices" >Practices</Link></li><br/>
+                    <li><Link to="/services" >Services</Link></li><br/>
+                    <li><Link to="/contact" >Contact Us</Link></li><br/>
                 </ul>
             </div>
 
@@ -47,9 +48,12 @@ function Footer(){
                     <li> Email <br/>  ertioo@gmail.com</li>
                  
                     <div className='socials'>
-                    <img className='s-l' src ={Fface}/>
-                    <img className='s-l' src ={Finsta}/>
-                    <img className='s-l' src={Flinkd}/>
+                        <Link to="#"> <img className='s-l' src ={Fface}/></Link>
+                        <Link to="#"><img className='s-l' src ={Finsta}/></Link>
+                        <Link to="#"><img className='s-l' src={Flinkd}/></Link>
+                    
+                    
+                    
                     </div>
 
                 </ul>
