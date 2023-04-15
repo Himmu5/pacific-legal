@@ -16,6 +16,7 @@ import feature1 from "../assets/success.png";
 import feature2 from "../assets/hammer.png";
 import feature3 from "../assets/case.png";
 import feature4 from "../assets/client.png";
+import ClientCarousel from "../components/ClientCarousel/ClientCarousel";
 
 function Home() {
   const whoarewe =
@@ -85,6 +86,7 @@ function Home() {
 
       <div className="client-content">
       <h2 className="services-header-title">What Clients Say</h2>
+      <ClientCarousel/>
       </div>
      
       </div>
