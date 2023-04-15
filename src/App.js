@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Practices from './pages/Practices';
 import SingleServuce from './pages/SingleService';
 import Hero from './components/Hero/Hero.jsx';
+import Medical from './pages/Medical';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/about" element = {<About />}/>
             <Route path="/practices" element = {<Practices />}/>
             <Route path="/singleservice" element = {<SingleServuce />}/>
+            <Route path="/medical" element = {<Medical/>}/>
           </Routes>
    </BrowserRouter>
 
