@@ -1,0 +1,20 @@
+.feature-parent{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.327);
+    border-radius: 0.5rem;
+
+}
+
+.feature-img{
+    height: 7rem;
+    width: 7rem;
+}
+
+.feature-sub{
+    margin-top: -1rem;
+}

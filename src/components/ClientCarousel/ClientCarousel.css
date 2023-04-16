@@ -1,0 +1,18 @@
+.carousel-slider{
+    overflow-x: hidden;
+    display: flex;
+    gap: 5rem;
+overflow-y: hidden;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .carousel-slider{
+        overflow-x: hidden;
+        display: flex;
+        gap: 0.2rem;
+    overflow-y: hidden;
+    } 
+}

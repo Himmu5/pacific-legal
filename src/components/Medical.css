@@ -1,16 +1,28 @@
-/* .Medical-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 .Medical-body {
   margin: 0px 108px 0px 108px;
 }
 
+@media only screen and (max-width: 600px) {
+  .Medical-body {
+    margin: 0px 15px 0px 15px;
+  }
+  
+}
 .b1 {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.m-image{
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .m-image{
+    width: 360px;
+  }
+  
 }
 .b2 {
   display: flex;
@@ -28,13 +40,19 @@
 
 .partation-line {
   margin-top: 30px;
-  width: 1224px;
+  max-width: 1224px;
   height: 6px;
   background: #ffaf00;
-  /* flex: none;
-order: 1;
-flex-grow: 0; */
 }
+
+@media  (max-width: 600px) {
+  .partation-line {
+    width: 345px;
+    height: 6px;
+  }
+}
+
+
 .name {
   font-family: Helvetica;
   font-size: 20px;
@@ -211,3 +229,8 @@ flex-grow: 0; */
   color: #000000;
   background-color: #ffffff;
 }
+
+.m-text span{
+  font-weight: 600;
+}
+

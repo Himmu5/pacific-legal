@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
+
+
+
+.s-box{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.s-head{
+ margin-bottom: -20px;
+    font-family: 'EB Garamond', serif;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 130%;
+color: #17181E;
+
+}
+
+.s-para{
+
+padding: 10px  50px  0px 50px;
+font-family: 'Helvetica';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+
+
+color: #111111;
+}
+
+.s-cardbox{
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+
+
+}
+
+@media only screen and (max-width:1200px) {
+    .s-cardbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+
+
+
+.s-card{
+    margin: 20px;
+}

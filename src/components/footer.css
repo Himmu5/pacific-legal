@@ -1,186 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
 
-/* Footer styling*/
+/* footer container */
 .f-container{
-    position: absolute;
-width: 100%;
-height: 551px;
-left: 0px;
-top: 1170px;
-background: #FFFFFF;
-
+    position:sticky;
+    /* width: 100%;
+    height: 620px; */
+    background: #FFFFFF;
+    
+  
 }
-
+/*footer box*/
 .f-box{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap:8rem;
    
 }
-/* @media (width < 1100px) {
+@media (width < 1100px) {
     .f-box{
         display: flex;
         flex-direction: column;
+       text-align: center;
+
+       gap:0rem;
     }
     
-} */
+}
+/*footer row*/
+.f-row{
+    margin-top:-20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
 
+
+/*media query footer row*/
+@media only screen and (max-width: 1100px) {
+    .f-row{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .f-last{
+        margin-bottom: -60px;
+        margin-left: 72px;
+        
+    }
+    
+}
+
+
+.f-last{
+    padding: 2rem;
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+}
+/*footer image */
 .f-image{
-    position: absolute;
-width: 90px;
+    width: 90px;
 height: 61px;
-left: 210px;
-top: 202px;
-mix-blend-mode: darken;
+margin-top: 215px;
+margin-right: -40px;
 }
 
-.f-head1{
-    position: absolute;
-width: 53px;
-height: 19px;
-left: 420px;
-top: 104px;
+@media only screen and (max-width:1100px) {
+    .f-image{
+        margin-top: 35px;
+        margin-bottom: 35px;;
+    } 
+}
 
-font-family: 'EB Garamond', serif;
+
+/* footer head */
+.f-head{
+    font-family: 'EB Garamond', serif;
 font-style: normal;
 font-weight: bold;
 font-size: 20px;
 line-height: 19px;
-
-
-
-color: #111111;
-
+margin-top:100px;
+margin-left: 15px;
 }
-.f-head2{
+
+@media only screen and (max-width:1100px) {
+    .f-head{
+        margin-top:0px;
+    }
     
-position: absolute;
-width: 76px;
-height: 19px;
-left: 628px;
-top: 104px;
-
-font-family: 'EB Garamond', serif;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 19px;
 }
 
-.f-head3{
-    position: absolute;
-width: 73px;
-height: 19px;
-left: 940px;
-top: 104px;
-
-font-family: 'EB Garamond', serif;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 19px;
+/*footer list*/
+.f-list{
+    list-style-type: none;
+    margin-top: -20px;
+    font-family: 'EB Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
 }
 
-.f-m-list{
-    position: absolute;
-width: 80px;
-height: 18px;
-left: 420px;
-top: 139px;
-list-style-type: none; 
-font-family: 'EB Garamond', serif;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 18px;
-
-margin-left: -20px;
-
-color: #000000;
-
-}
-
-.f-a-list{
-    padding-top: 10px;
-    position: absolute;
-width: 181px;
-height: 54px;
-left: 631px;
-top: 135px;
-list-style-type: none; 
-font-family: 'EB Garamond', serif;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 18px;
-margin-left: -20px;
-color: #000000;
-
-
-}
-
+/* Map*/
 .f-map{
-    
-    position: absolute;
+        
     width: 200px;
     height: 114px;
-
-margin-top:10px;
 border-radius: 10px;
-}
-
-.f-c-list{
-    padding-top: 10px;
-    
-    position: absolute;
-width: 41px;
-height: 18px;
-left: 940px;
-top: 135px;
-list-style-type: none; 
-font-family: 'EB Garamond', serif;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 18px;
-margin-left: -20px;
-}
-
-.f-last1{
-    position: absolute;
-width: 161px;
-height: 21px;
-left: 522px;
-top: 425px;
-
-font-family: 'Helvetica';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 21px;
-color: #111111;
 
 }
 
-.f-last2{
-    position: absolute;
-width: 221px;
-height: 21px;
-left: 730px;
-top: 425px;
 
-font-family: 'Helvetica';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 21px;
-}
+/* socials*/
 
 .socials{
-    display: flex;
-    flex-direction: col;
-    align-items: center;
-    
+    margin-top:7px;
+    margin-left:-5px;
 }
 .s-l{
-    padding:  20px  4px 4px;
+    padding: 5px;
 }
+
+
