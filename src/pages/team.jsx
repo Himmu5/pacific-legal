@@ -8,7 +8,7 @@ import TeamBody from '../components/team.js';
 function Team(){
     return(
         <>
-        <Navbar/>
+        <Navbar index={3}/>
         <Hero title="The Team"/>
         <TeamBody/>
         <Footer/>

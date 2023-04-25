@@ -14,7 +14,7 @@ function Practices(){
     const na_content = "Our passionate attorneys bring a unique approach to every case. Today, we are overwhelmed with a confusing array of regulations, rules and requirements. See our areas of expertise and call us with your legal questions today.";
     return(
         <>
-        <Navbar/>
+        <Navbar index={4}/>
         <Hero title="Practices"/>
         <div className="NorthA">
         <div className="NorthAText">

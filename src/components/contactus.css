@@ -16,6 +16,7 @@
 .free-consult-right-in {
   margin-right: 60px;
   border-radius: 0.5rem;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -160,12 +161,19 @@ padding: 14px 38px 14px 38px;
   margin: 20px 20px;
 }
 
-#mobile {
+.contact-box:hover {
   background-color: white;
   border: 1px solid white;
+  cursor: context-menu;
 }
 
 .c-map {
-  width: 100%;
+  width: 90vw;
   height: 570px;
+  border: none;
+}
+.map-location{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

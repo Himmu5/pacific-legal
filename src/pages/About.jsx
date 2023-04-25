@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar/Navbar.jsx';
 function About(){
     return(
         <>
-        <Navbar/>
+        <Navbar index={2}/>
         <Hero title="About us"/>
         <AboutBody/>
         <Footer/>

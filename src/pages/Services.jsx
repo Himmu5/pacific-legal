@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar/Navbar.jsx';
 function Services(){
     return(
         <>
-        <Navbar/>
+        <Navbar index={5}/>
         <Hero title = "Services"/>
         <ServiceBody/>
         <Footer/>

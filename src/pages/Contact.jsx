@@ -8,7 +8,7 @@ import ContactUsBody from '../components/contactus.js';
 function Contact(){
     return(
         <>
-        <Navbar/>
+        <Navbar index={6}/>
         <Hero title="Contact Us"/>
         <ContactUsBody/>
         <Footer/>

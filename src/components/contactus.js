@@ -59,7 +59,7 @@ function ContactUsBody() {
               />
             </div>
           </div>
-          <div className="free-consult-form-fields free-consult-right">
+          <div className="free-consult-form-fields">
             <label for="message">Message</label>
             <textarea
               name=""

@@ -26,7 +26,7 @@ function Home() {
     "We work closely with clients to provide exceptional legal services that are catered specifically to their needs. Take a look at the services we offer, and get in touch today with any questions.";
   return (
     <>
-      <Navbar />
+      <Navbar index={0}/>
       <div className="home-header">
         <img className="dawn-bg" src={dawn} alt="" />
         <div className="header-content">

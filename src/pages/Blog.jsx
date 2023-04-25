@@ -6,7 +6,7 @@ import Footer from '../components/footer.js';
 function Blog(){
     return(
         <>
-        <Navbar/>
+        <Navbar index={1}/>
         <Hero title =" Our Blogs"/>
         <BlogBody/>
         <Footer/>

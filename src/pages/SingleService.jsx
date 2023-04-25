@@ -26,7 +26,7 @@ if(data[service]!=null){
 
   return (
     <>
-    <Navbar/>
+    <Navbar index={5}/>
       
 
       {
