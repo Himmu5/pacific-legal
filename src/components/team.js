@@ -33,6 +33,8 @@ function TeamBody() {
             and software tech, where he contributed substantially Read more
           </p>
         </div>
+
+        
       </div>
     </>
   );

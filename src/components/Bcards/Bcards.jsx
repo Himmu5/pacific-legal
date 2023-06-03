@@ -1,4 +1,5 @@
 import '../Bcards/Bcards.css'
+import {  Link } from "react-router-dom";
 
 function Bcards(props){
     const url = props.url;
@@ -11,7 +12,8 @@ function Bcards(props){
        <>
        <div className='bcardtile' style={{"backgroundImage": "url("+url+")"}}>
         <div className='bcardbox'>
-        <h3 className='bcardtitle'>{title}</h3>
+        <h3 className='bcardtitle'>
+            <Link to = "/medical"> {title} </Link></h3>
         <div className='bd-box'>
         <img className='bcardauthor' src={authImage}/> 
         <div className='bnt-box'>
