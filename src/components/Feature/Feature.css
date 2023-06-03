@@ -7,7 +7,6 @@
     flex-direction: column;
     border: 1px solid rgba(0, 0, 0, 0.327);
     border-radius: 0.5rem;
-
 }
 
 .feature-img{
@@ -17,4 +16,30 @@
 
 .feature-sub{
     margin-top: -1rem;
+}
+
+  
+@media only screen and (max-width: 600px) {
+    .feature-parent{
+        width: 8rem;
+        height: 8rem;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.327);
+        border-radius: 0.5rem;
+        font-size: 0.5rem;
+    }
+    
+    .feature-img{
+        height: 3rem;
+        width: 3rem;
+    }
+    
+    .feature-sub{
+        margin-top: -1rem;
+    }
+
 }
