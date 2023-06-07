@@ -11,6 +11,8 @@ import Services from './pages/Services';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Team from './pages/team';
+import Admin from './admin/pages/Admin';
+import EditBlog from './admin/pages/EditBlog';
 function App() {
   return (
    <BrowserRouter>
@@ -24,6 +26,8 @@ function App() {
             <Route path="/services" element = {<Services/>}/>
             <Route path="/singleservice" element = {<SingleService />}/>
             <Route path="/blog" element={<Blog/>}/>
+            <Route path="/admin" element={<Admin/>}/>
+            <Route path="/editblog" element={<EditBlog/>}/>
           </Routes>
    </BrowserRouter>
 
