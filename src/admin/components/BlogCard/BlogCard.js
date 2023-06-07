@@ -1,5 +1,4 @@
 import './BlogCard.css'
-import {  Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 function BlogCard(props){

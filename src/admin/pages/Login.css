@@ -1,0 +1,10 @@
+.login-cont{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    /* padding: 2rem; */
+}
+
+input{
+    margin-top: 1rem;
+    border: 1px solid black;
+}

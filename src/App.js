@@ -1,10 +1,9 @@
 import './App.css';
-import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import About from './pages/About';
 import Home from './pages/Home';
 import Practices from './pages/Practices';
 import SingleService from './pages/SingleService';
-import Hero from './components/Hero/Hero.jsx';
 import Medical from './pages/Medical';
 
 import Services from './pages/Services';
@@ -13,6 +12,7 @@ import Contact from './pages/Contact';
 import Team from './pages/team';
 import Admin from './admin/pages/Admin';
 import EditBlog from './admin/pages/EditBlog';
+import Login from './admin/pages/Login';
 function App() {
   return (
    <BrowserRouter>
@@ -28,6 +28,7 @@ function App() {
             <Route path="/blog" element={<Blog/>}/>
             <Route path="/admin" element={<Admin/>}/>
             <Route path="/editblog" element={<EditBlog/>}/>
+            <Route path="/login" element={<Login/>}/>
           </Routes>
    </BrowserRouter>
 
