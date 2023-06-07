@@ -42,13 +42,21 @@ function EditBlog(){
                 <img src={uploadimg} alt="" srcset="" style={{"height": "3rem"}}/>
                 <h4>Click to add thumbnail</h4>
             </div>
+            <div className='row2-right'>
             <div className='auth-details'>
-            <h4>Author Details</h4>
+            <h4>Author Name</h4>
                 <input type='text' className='admin-title-input' placeholder='Type Name..'></input>
                <br></br>
-                <input type='text' className='admin-title-input' placeholder='Type Designation..'></input>
-           
-            </div>
+               </div>
+               <div className='date-time'>
+               <h4>Published Date</h4>
+                <input type='text' className='admin-title-input' placeholder='Type Date ..'></input>
+                <br></br>
+                <h4>Read Time</h4>
+                <input type='text' className='admin-title-input' placeholder='Enter Time ..'></input>
+                </div>
+                </div>
+            
         </div>
 
         <div>
@@ -58,8 +66,41 @@ function EditBlog(){
             </div>
             <div className='editblogcontent'>
                 <h4>Blog Content</h4>
-                <textarea className='admin-content-input' placeholder='Type Here..'></textarea>
+                <textarea className='admin-bcontent-input' placeholder='Type Here..'></textarea>
             </div>
+
+
+            <div className='editblogtitle'>
+                <h4>Meta Title</h4>
+                <input type='text' className='admin-title-input' placeholder='Type Here..'></input>
+            </div>
+            <div className='editblogtitle'>
+                <h4>Meta Tags</h4>
+                <input type='text' className='admin-title-input' placeholder='Type Here..'></input>
+            </div>
+            <div className='editblogcontent'>
+                <h4>Meta Description</h4>
+                <textarea className='admin-other-content-input' placeholder='Type Here..'></textarea>
+            </div>
+            <div className='editblogtitle'>
+                <h4>Slugs</h4>
+                <input type='text' className='admin-title-input' placeholder='Type Here..'></input>
+            </div>
+            <div className='editblogcontent'>
+                <h4>Excrept</h4>
+                <textarea className='admin-other-content-input' placeholder='Type Here..'></textarea>
+            </div>
+            <div className='editblogtitle'>
+                <h4>Category</h4>
+                <input type='text' className='admin-title-input' placeholder='Type Here..'></input>
+            </div>
+            <div className='editblogtitle'>
+                <h4>Tags</h4>
+                <input type='text' className='admin-title-input' placeholder='Type Here..'></input>
+            </div>
+
+
+
         </div>
         </div>
         </>
