@@ -4,8 +4,16 @@ import BlogCard from "../components/BlogCard/BlogCard";
 import { useEffect, useState } from "react";
 import { auth } from "../backend/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import BlogList from "../components/ReadCard"; 
 
 function Admin() {
+
+  const [blogId, setBlogId] = useState("");
+
+  const getBlogIdHandler = (id) => {
+    console.log("The ID of document to be edited: ", id);
+    setBlogId(id);
+  };
   const navigate = useNavigate();
   const data =[{"name":"dummy1"},{"name":"dumm2"}];
 
@@ -66,7 +74,8 @@ function Admin() {
         </div>
         <div>
           {data.map(function (d, index) {
-            return <BlogCard title="xyz" date="23/3/23" status="hidden" key={index} />;
+            // return <BlogCard title="xyz" date="23/3/23" status="hidden" key={index} />;
+            return<BlogList getBlogId={getBlogIdHandler}/>;
           })}
           
         </div>

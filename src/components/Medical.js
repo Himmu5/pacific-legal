@@ -291,7 +291,7 @@ function MedicalBody() {
             <div className="comment-wh-body">
               <h2>Leave a comment</h2>
               <div className="comment-box">
-                <textarea placeholder="Write a comment" />
+                <textarea className="leave-comment" placeholder="Write a comment" />
                 <div className="commentbox-line"></div>
                 <div className="add-item-logo">
                   <img

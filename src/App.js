@@ -13,6 +13,7 @@ import Team from './pages/team';
 import Admin from './admin/pages/Admin';
 import EditBlog from './admin/pages/EditBlog';
 import Login from './admin/pages/Login';
+import AddBlog from './admin/pages/AddBlog';
 function App() {
   return (
    <BrowserRouter>
@@ -28,6 +29,7 @@ function App() {
             <Route path="/blog" element={<Blog/>}/>
             <Route path="/admin" element={<Admin/>}/>
             <Route path="/editblog" element={<EditBlog/>}/>
+            <Route path="/add" element={<AddBlog/>}/>
             <Route path="/login" element={<Login/>}/>
           </Routes>
    </BrowserRouter>

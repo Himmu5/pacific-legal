@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function BlogCard(props){
     const title = props.title;
     const date = props.date;
-    const status = props.status;
+    const name = props.name;
     const navigate = useNavigate();
     return(
        <>
@@ -13,7 +13,7 @@ function BlogCard(props){
                 <p>
                     Title: {title} <br></br>
                     Date Added: {date} <br></br>
-                    Status: {status}
+                    Name: {name}
                 </p>
             </div>
             <div>

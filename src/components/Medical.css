@@ -172,7 +172,10 @@
   border: 1px solid #000000;
   border-radius: 8px;
 }
-
+.leave-comment{
+  height:5rem;
+  width:99%;
+}
 .commentbox-line {
   width: 1034px;
   height: 0px;
