@@ -1,45 +1,116 @@
 import { useNavigate } from 'react-router-dom';
 import './EditBlog.css'
 import uploadimg from '../../assets/upload.png'
-import { useState } from 'react';
-// import firebase from 'firebase/compat/app';
-// import 'firebase/compat/firestore';
+// import { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import BlogDataService from "../backend/firestore";
 
-// import { db } from '../backend/firebase';
-// import { addDoc, collection, doc, setDoc} from 'firebase/firestore';
 
-function EditBlog(){
-    const navigate = useNavigate();
-    const [name, setName] = useState(null);
-    const [time, setTime] = useState(null);
-    const [date, setDate] = useState(null);
-    const [btitle, setBtitle] = useState(null);
-    const [bcontent, setBcontent] = useState(null);
-    const [mtitle, setMtitle] = useState(null);
-    const [mtag, setMtags] = useState(null);  
-    const [mdesc, setMdesc] = useState(null);
-    const [slugs, setSlugs] = useState(null);
-    const [excrept, setExcrept] = useState(null);
-    const [category, setCategory] = useState(null); 
-    const [tags, setTags] = useState(null);
+
+const EditBlog = ({ id, setBlogId })=>{
+
+        const navigate = useNavigate();
+        const [name, setName] = useState(null);
+        const [time, setTime] = useState(null);
+        const [date, setDate] = useState(null);
+        const [btitle, setBtitle] = useState(null);
+        const [bcontent, setBcontent] = useState(null);
+        const [mtitle, setMtitle] = useState(null);
+        const [mtag, setMtags] = useState(null);  
+        const [mdesc, setMdesc] = useState(null);
+        const [slugs, setSlugs] = useState(null);
+        const [excrept, setExcrept] = useState(null);
+        const [category, setCategory] = useState(null); 
+        const [tags, setTags] = useState(null);
+        const [message, setMessage] = useState({ error: false, msg: "" });
+
+       
+  const handleSubmit = async (e) => {
+    console.log("working")
+    e.preventDefault();
+    setMessage("");
+    if (name==="" ) {
+      setMessage({ error: true, msg: "Please mandatory fields" });
+      return;
+    }
+    const newBlog = {
+     name,
+     time,
+     date,
+     btitle,
+     bcontent,
+     mtitle,
+     mtag,
+     mdesc,
+     slugs,
+     excrept,
+     category,
+     tags,
+    };
+    console.log(newBlog);  
     
-    var data = {
-      "author-name": name,
-      "published-date": date,
-      "read-time": time,
-      "blog-title": btitle,
-      "blog-content": bcontent,
-      "meta-title": mtitle,
-      "meta-tag": mtag,
-      "meta-desc": mdesc,
-      "slugs": slugs,
-      "excrept": excrept,
-      "category": category,
-      "tags": tags
-  } 
+    try {
+      if (id !== undefined && id !== "") {
+        await BlogDataService.updateBlog(id, newBlog);
+        setBlogId("");
+        setMessage({ error: false, msg: "Updated successfully!" });
+      } else {
+        await BlogDataService.addBlogs(newBlog);
+        setMessage({ error: false, msg: "New Blog added successfully!" });
+      }
+    } catch (err) {
+      setMessage({ error: true, msg: err.message });
+    }
 
+
+      setName("");
+      setTime("");
+      setDate("");
+      setBtitle("");
+      setBcontent("");
+      setMtitle("");
+      setMtags("");
+      setMdesc("");
+      setSlugs("");
+      setExcrept("");
+      setCategory("");
+      setTags("");
+
+   navigate("/admin");
+
+    }
+
+    const editHandler = async () => {
+      setMessage("");
+      try {
+        const docSnap = await BlogDataService.getBlog(id);
+        console.log("the record is :", docSnap.data());
+      setName(docSnap.data().name);
+      setTime(docSnap.data().time);
+      setDate(docSnap.data().date);
+      setBtitle(docSnap.data().btitle);
+      setBcontent(docSnap.data().bcontent);
+      setMtitle(docSnap.data().mtitle);
+      setMtags(docSnap.data().mtag);
+      setMdesc(docSnap.data().mdesc);
+      setSlugs(docSnap.data().slugs);
+      setExcrept(docSnap.data().excrept);
+      setCategory(docSnap.data().category);
+      setTags(docSnap.data().tags);
+       
+      } catch (err) {
+        setMessage({ error: true, msg: err.message });
+      }
+    };
   
-
+    useEffect(() => {
+      console.log("The id here is : ", id);
+      if (id !== undefined && id !== "") {
+        editHandler();
+      }
+    }, [id]);
+    
+      
 
     function handleChangename(event){
       setName(event.target.value);
@@ -95,12 +166,12 @@ function EditBlog(){
         <div className="EditPage">
        
             <div className="row1">
-          <h1>Editing Mode</h1>
+          <h1>Add A Blog </h1>
           <div className='subrow1'>
           <button
             onClick={() => {
                 navigate('/admin');
-              
+           
             }}
 
             style={{"backgroundColor": "#c23b22 "}}
@@ -115,10 +186,11 @@ function EditBlog(){
             Save Draft
           </button>
           <button 
-            onClick={() => {
-              navigate("/editblog");
-            }}
-            // onClick={handleAdd(data)}
+            // onClick={() =>{
+            //    console.log("wroking");
+            // }}
+            
+             onClick={handleSubmit}
           >
             Publish
           </button>
@@ -134,15 +206,15 @@ function EditBlog(){
             <div className='row2-right'>
             <div className='auth-details'>
             <h4>Author Name</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Name..' onChange={handleChangename}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Name..' value={name} onChange={handleChangename}></input>
                <br></br>
                </div>
                <div className='date-time'>
                <h4>Published Date</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Date ..' onChange={handleChangedate}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Date ..' value={date} onChange={handleChangedate}></input>
                 <br></br>
                 <h4>Read Time</h4>
-                <input type='text' className='admin-title-input' placeholder='Enter Time ..' onChange={handleChangetime}></input>
+                <input type='text' className='admin-title-input' placeholder='Enter Time ..' value={time} onChange={handleChangetime}></input>
                 </div>
                 </div>
             
@@ -151,41 +223,41 @@ function EditBlog(){
         <div>
             <div className='editblogtitle'>
                 <h4>Blog Title</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Here..' onChange={handleChangebtitle}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Here..' value={btitle} onChange={handleChangebtitle}></input>
             </div>
             <div className='editblogcontent'>
                 <h4>Blog Content</h4>
-                <textarea className='admin-bcontent-input' placeholder='Type Here..' onChange={handleChangebcontent}></textarea>
+                <textarea className='admin-bcontent-input' placeholder='Type Here..' value={bcontent} onChange={handleChangebcontent}></textarea>
             </div>
 
 
             <div className='editblogtitle'>
                 <h4>Meta Title</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Here..' onChange={handleChangemtitle}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Here..' value={mtitle} onChange={handleChangemtitle}></input>
             </div>
             <div className='editblogtitle'>
                 <h4>Meta Tags</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Here..' onChange={handleChangemtags}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Here..' value={mtag} onChange={handleChangemtags}></input>
             </div>
             <div className='editblogcontent'>
                 <h4>Meta Description</h4>
-                <textarea className='admin-other-content-input' placeholder='Type Here..' onChange={handleChangemdesc}></textarea>
+                <textarea className='admin-other-content-input' placeholder='Type Here..' value={mdesc} onChange={handleChangemdesc}></textarea>
             </div>
             <div className='editblogtitle'>
                 <h4>Slugs</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Here..' onChange={handleChangeslugs}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Here..'  value={slugs} onChange={handleChangeslugs}></input>
             </div>
             <div className='editblogcontent'>
                 <h4>Excrept</h4>
-                <textarea className='admin-other-content-input' placeholder='Type Here..' onChange={handleChangeexcrept}></textarea>
+                <textarea className='admin-other-content-input' placeholder='Type Here..' value={excrept} onChange={handleChangeexcrept}></textarea>
             </div>
             <div className='editblogtitle'>
                 <h4>Category</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Here..' onChange={handleChangecategory}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Here..' value={category} onChange={handleChangecategory}></input>
             </div>
             <div className='editblogtitle'>
                 <h4>Tags</h4>
-                <input type='text' className='admin-title-input' placeholder='Type Here..' onChange={handleChangetags}></input>
+                <input type='text' className='admin-title-input' placeholder='Type Here..' value={tags} onChange={handleChangetags}></input>
             </div>
 
 
@@ -198,5 +270,7 @@ function EditBlog(){
 
 
 }
+
+
 
 export default EditBlog;

@@ -69,7 +69,7 @@ function AddBlog(){
       setCategory("");
       setTags("");
 
-      // navigate("/admin");
+   navigate("/admin");
 
     }
     
@@ -149,7 +149,9 @@ function AddBlog(){
             Save Draft
           </button>
           <button 
-            
+            // onClick={() =>{
+            //    console.log("wroking");
+            // }}
             
              onClick={handleSubmit}
           >

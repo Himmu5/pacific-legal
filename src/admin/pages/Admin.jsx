@@ -4,7 +4,7 @@ import BlogCard from "../components/BlogCard/BlogCard";
 import { useEffect, useState } from "react";
 import { auth } from "../backend/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import BlogList from "../components/ReadCard"; 
+
 
 function Admin() {
 
@@ -15,7 +15,6 @@ function Admin() {
     setBlogId(id);
   };
   const navigate = useNavigate();
-  const data =[{"name":"dummy1"},{"name":"dumm2"}];
 
   
   const [currentUser, setCurrentUser] = useState(null);
@@ -62,7 +61,7 @@ function Admin() {
           </button>
           <button
             onClick={() => {
-              navigate("/editblog");
+              navigate("/add");
             }}
           >
             Create New Blog
@@ -70,14 +69,10 @@ function Admin() {
           </div>
         </div>
         <div>
-          <h4>Your Blogs</h4>
+          <h3>Your Blogs</h3>
         </div>
         <div>
-          {data.map(function (d, index) {
-            // return <BlogCard title="xyz" date="23/3/23" status="hidden" key={index} />;
-            return<BlogList getBlogId={getBlogIdHandler}/>;
-          })}
-          
+            <BlogCard getBlogId={getBlogIdHandler} />;
         </div>
       </div>
     </>
