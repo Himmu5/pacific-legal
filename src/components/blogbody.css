@@ -14,13 +14,34 @@
 }
 
 .b-cards{
-    display: flex;
+    /* cursor: pointer; */
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    /* padding-bottom: 10rem; */
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 12rem;
+    row-gap: 15rem;
+    column-gap: 10rem;
+    margin-bottom: 15rem;
+    /* margin-top: 2rem; */
+    /* margin-bottom: 12rem; */
 }
 
+.b-card-single{
+    cursor: pointer;
+}
+
+/* .b-cards:hover{
+    transform: scale(1.02);
+    transition: 0.4s;
+} */
+
+.b-card-single:hover{
+transform: scale(1.02);
+transition: 0.4s;
+}
 @media only screen and (max-width:1200px) {
     .b-cards{
         display: flex;

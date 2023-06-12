@@ -91,6 +91,7 @@ import {
   doc,
 } from "firebase/firestore";
 
+
 const blogCollectionRef = collection(db, "blogs");
 class BlogDataService {
   addBlogs = (newBlog) => {
@@ -115,6 +116,7 @@ class BlogDataService {
     const blogDoc = doc(db, "blogs", id);
     return getDoc(blogDoc);
   };
+
 }
 
 export default new BlogDataService();

@@ -4,12 +4,16 @@
 
 
 .bcardtile{
+    cursor: pointer;
     width: 392px;
     height: 260px;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.bcardtile:hover{
+    transform: scale(1.02);
+    transition: 0.4s;
+}
 .tileimg{
     width: 392px;
     height: 260px;
@@ -22,6 +26,7 @@
 border-radius: 0px 0px 10px 10px;
 }
 .bcardtitle{
+  
 text-align: start;
 padding: 1rem 1rem;
 font-size: 22px;

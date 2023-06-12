@@ -1,5 +1,5 @@
 import '../Bcards/Bcards.css'
-import {  Link } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 
 function Bcards(props){
     const url = props.url;
@@ -7,10 +7,13 @@ function Bcards(props){
     const authImage = props.authImage;
     const authName = props.authName;
     const detail = props.detail;
-
+    const id = props.id;
+    const navigate = useNavigate();
     return(
        <>
-       <div className='bcardtile' style={{"backgroundImage": "url("+url+")"}}>
+       <div className='bcardtile' style={{"backgroundImage": "url("+url+")"}} onClick={()=>{
+        navigate('/blogs?id='+id);
+       }}>
         <div className='bcardbox'>
         <h3 className='bcardtitle'>
             <Link to = "/medical"> {title} </Link></h3>
@@ -28,5 +31,6 @@ function Bcards(props){
 
 
 }
+
 
 export default Bcards;

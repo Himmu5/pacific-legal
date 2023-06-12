@@ -1,0 +1,262 @@
+
+.Medical-body {
+    margin: 0px 108px 0px 108px;
+   
+  }
+
+  .m-image{
+    margin-top: 5rem;
+    border-radius: 1rem;
+height: 20rem;
+width: 90vw;
+object-fit: cover;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .Medical-body {
+      margin: 0px 15px 0px 15px;
+      max-width: 100vw;
+      overflow-x: hidden;
+      
+    }
+    
+  }
+  
+  /* ######### IAMGE SECTION ############# */
+  
+  .b1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  
+  
+  @media (max-width: 600px) {
+    .m-image{
+      max-width: 360px;
+    max-height: 100px;
+    }
+    
+  }
+  
+  /* ######### DETAILS AND TEXT ############# */
+  
+  .b2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* ######### AUTHOR DETAILS ############# */
+  
+  .info-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  
+  .partation-line {
+    margin-top: 30px;
+    max-width: 1224px;
+    height: 6px;
+    background: #ffaf00;
+  }
+  
+  @media  (max-width: 600px) {
+    .partation-line {
+      width: 345px;
+      height: 6px;
+    }
+  }
+  
+  
+  .name {
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .date-time {
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .dot {
+    height: 4px;
+    width: 4px;
+    left: 186px;
+    top: 48px;
+    border-radius: 0px;
+    margin-bottom: 4px;
+  }
+  
+  .profile-img-details {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .name-info {
+    margin-left: 20px;
+  }
+  .name {
+    margin-top: 4px;
+    margin-bottom: 5px;
+  }
+  
+  /* ######### UPPER IAMGE PART ############# */
+  
+  .heading {
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+  }
+  
+  .m-text ul li p {
+    font-family: Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .m-text ul {
+    padding: 0px 16px;
+    margin: 20px 20px;
+  }
+  
+  .share-post {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  
+  .share-post span {
+    font-family: Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 40px;
+  }
+  
+  .m-sharelogo {
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    margin: 0px 15px;
+  }
+  
+  .comment-wh-body {
+    left: 108px;
+    top: 3877px;
+    padding: 50px 70px 50px 50px;
+    margin-top: 55px;
+    background: #ffffff;
+    border-radius: 30px;
+  }
+  
+  .comment-box {
+    box-sizing: border-box;
+    height: 260px;
+    left: 158px;
+    top: 4009px;
+  
+    border: 1px solid #000000;
+    border-radius: 8px;
+  }
+  .leave-comment{
+    height:5rem;
+    width:99%;
+  }
+  .commentbox-line {
+    width: 1034px;
+    height: 0px;
+    left: 188px;
+    top: 4201px;
+  
+    opacity: 0.1;
+  
+    border: 1px solid #17181e;
+  }
+  
+  .add-item-image {
+    margin: 0px 15px;
+  }
+  
+  #smile {
+    height: 28px;
+    width: 28px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  
+  #camera {
+    height: 28px;
+    width: 28px;
+    left: 58px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  
+  #videocamera {
+    height: 28px;
+    width: 34px;
+    left: 116px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  
+  #gif {
+    height: 28px;
+    width: 45px;
+    left: 174px;
+    top: 0px;
+    border-radius: 0px;
+  }
+  
+  .btn-commentbox {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 40px 0px 0px -70px;
+  }
+  .btn-comment {
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  
+    height: 44px;
+    width: 117px;
+    left: 100px;
+    top: 0px;
+    border-radius: 4px;
+    padding: 10px 32px 10px 32px;
+  }
+  #cancel-btn {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  
+  .m-text span{
+    font-weight: 600;
+  }
+  
+  

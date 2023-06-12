@@ -2,14 +2,54 @@ import { useNavigate } from 'react-router-dom';
 import './EditBlog.css'
 import uploadimg from '../../assets/upload.png'
 // import { useState } from 'react';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import BlogDataService from "../backend/firestore";
+
+
+import {
+  ref,
+  uploadBytesResumable,
+  getDownloadURL 
+} from "firebase/storage";
+import { storage } from '../backend/firebase';
 
 
 
 function AddBlog(){
 
+  const [percent, setPercent] = useState(0);
+  function handleUpload() {
+    if (!fileUploaded) {
+        alert("Please choose a file first!")
+    }
+ 
+    const storageRef = ref(storage,`/images/${fileUploaded.name}`)
+    const uploadTask = uploadBytesResumable(storageRef, fileUploaded);
+ 
+    uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+            const percent = Math.round(
+                (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+            );
+ 
+            // update progress
+            setPercent(percent);
+        },
+        (err) => console.log(err),
+        () => {
+            // download url
+            getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+                console.log(url);
+                setImgUrl(url);
+                handleSubmit()
+            });
+        }
+    ); 
+}
+
         const navigate = useNavigate();
+        const [imgUrl, setImgUrl] = useState(null);
         const [name, setName] = useState(null);
         const [time, setTime] = useState(null);
         const [date, setDate] = useState(null);
@@ -19,21 +59,23 @@ function AddBlog(){
         const [mtag, setMtags] = useState(null);  
         const [mdesc, setMdesc] = useState(null);
         const [slugs, setSlugs] = useState(null);
+        const [hidden, setHidden] = useState(false);
         const [excrept, setExcrept] = useState(null);
         const [category, setCategory] = useState(null); 
         const [tags, setTags] = useState(null);
         const [message, setMessage] = useState({ error: false, msg: "" });
 
        
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     console.log("working")
-    e.preventDefault();
+    // e.preventDefault();
     setMessage("");
     if (name==="" ) {
       setMessage({ error: true, msg: "Please mandatory fields" });
       return;
     }
     const newBlog = {
+      imgUrl,
      name,
      time,
      date,
@@ -46,6 +88,7 @@ function AddBlog(){
      excrept,
      category,
      tags,
+     hidden
     };
     console.log(newBlog);  
     
@@ -113,15 +156,22 @@ function AddBlog(){
     }
    
    
+  
+
+   const [fileUploaded, setFileUploaded] = useState(null);
+   const [instruction, setIns] = useState("Click to add thumbnail");
    
-   
-   
-   
-   
-   
-   
-   
-    
+    const hiddenFileInput = useRef(null);
+  
+    const handleUp = event => {
+      hiddenFileInput.current.click();
+    };  const handleChange = event => {
+      //  fileUploaded = ;
+      setFileUploaded(event.target.files[0]);
+      setIns("File uploaded successfully!!")
+      // props.handleFile(fileUploaded);
+
+    };
 
 
     return(
@@ -141,19 +191,20 @@ function AddBlog(){
           >
             Discard
           </button>
-          <button
+          {/* <button
             onClick={() => {
                 navigate("/editblog");
             }}
           >
             Save Draft
-          </button>
+          </button> */}
           <button 
             // onClick={() =>{
             //    console.log("wroking");
             // }}
             
-             onClick={handleSubmit}
+            //  onClick={handleSubmit}
+        onClick={handleUpload}
           >
             Publish
           </button>
@@ -161,11 +212,17 @@ function AddBlog(){
         </div>
 
         <div className='row2'>
-            <div className='thumbnail-input'>
+            <div className='thumbnail-input' onClick={handleUp} style={{"cursor": "pointer"}}>
                 {/* <img src={uploadimg} alt="" srcset="" style={{"height": "3rem"}}/> */}
                 <img src={uploadimg} alt="" style={{"height": "3rem"}}/>
-                <h4>Click to add thumbnail</h4>
+                <h4>{instruction}</h4>
             </div>
+            {/* {fileUploaded &&  <img src={preview} /> } */}
+            <input type="file"  accept="image/*"
+             ref={hiddenFileInput}
+             onChange={handleChange}
+             style={{display:'none'}} 
+      /> 
             <div className='row2-right'>
             <div className='auth-details'>
             <h4>Author Name</h4>

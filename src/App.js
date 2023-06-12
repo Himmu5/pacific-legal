@@ -14,6 +14,7 @@ import Admin from './admin/pages/Admin';
 import EditBlog from './admin/pages/EditBlog';
 import Login from './admin/pages/Login';
 import AddBlog from './admin/pages/AddBlog';
+import SingleBlog from './components/SingleBlog';
 function App() {
   return (
    <BrowserRouter>
@@ -31,6 +32,7 @@ function App() {
             <Route path="/editblog" element={<EditBlog/>}/>
             <Route path="/add" element={<AddBlog/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/blogs" element={<SingleBlog/>}/>
           </Routes>
    </BrowserRouter>
 

@@ -7,30 +7,40 @@ import Bimage5 from '../assets/blog5.png';
 import Bimage6 from '../assets/blog6.png';
 import Bauthor from '../assets/blogauth.png';
 import Bcards from './Bcards/Bcards';
+import { useEffect, useState } from 'react';
+import BlogDataService from '../admin/backend/firestore'
 
 
 function BlogBody(){
+    const [blogId, setBlogId] = useState("");
+    const [blogs, setBlogs] = useState([]);
+    useEffect(() => {
+      getBlogs();
+    }, []);
+
+    const getBlogs = async () => {
+        const data = await BlogDataService.getAllBlog();
+        console.log(data.docs);
+        setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      };
+
     return(
         <>
         <div className='b-container'>
             <h1 className='b-head'> All Post</h1>
             <div className='b-cards'>
-           <Bcards url={Bimage1} title={"Short-Term Residence permit in Turkey"} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-           <Bcards url={Bimage2} title={"Medical Malpractice Cases in Turkey"} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-           <Bcards url={Bimage3} title={"Short-Term Rental VS Tenancies Act"} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-           
-            </div>
-            <div className='b-cards'>
-            <Bcards url={Bimage4} title={"The libor rigging Scandal Candle And Its Aftermath"} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-            <Bcards url={Bimage5} title={"Boeing 737 Max and Airline Compensation: Both Grounded."} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-            <Bcards url={Bimage6} title={"Seeking flight compensation? Better know the time limitation."} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-                
-            </div>
-            <div className='b-cards'>
-            <Bcards url={Bimage1} title={"Short-Term Residence permit in Turkey"} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-            <Bcards url={Bimage2} title={"Medical Malpractice Cases in Turkey"} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-            <Bcards url={Bimage3} title={"Short-Term Rental VS Tenancies Act"} authImage={Bauthor} authName = {"Avi Aporve Khanna"} detail={"May 10, 2022   4 min"} />
-                
+
+            {blogs.map((doc, index) => {
+                {
+                    if(doc.hidden==false){
+                        return(
+
+                            <Bcards url={doc.imgUrl} title={doc.btitle} authImage={Bauthor} authName = {doc.name} detail={doc.date + " " + doc.time} id={doc.id} />
+                            
+                                              );
+                    }
+                }
+                })}
             </div>
              </div>
         
