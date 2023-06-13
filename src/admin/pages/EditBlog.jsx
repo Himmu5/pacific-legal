@@ -8,6 +8,8 @@ import BlogDataService from "../backend/firestore";
 
 
 const EditBlog = ({ id, setBlogId })=>{
+  const queryParameters = new URLSearchParams(window.location.search)
+  const id_ = queryParameters.get("id")
 
         const navigate = useNavigate();
         const [name, setName] = useState(null);
@@ -50,14 +52,11 @@ const EditBlog = ({ id, setBlogId })=>{
     console.log(newBlog);  
     
     try {
-      if (id !== undefined && id !== "") {
-        await BlogDataService.updateBlog(id, newBlog);
+      if (id_ !== undefined && id_ !== "") {
+        await BlogDataService.updateBlog(id_, newBlog);
         setBlogId("");
         setMessage({ error: false, msg: "Updated successfully!" });
-      } else {
-        await BlogDataService.addBlogs(newBlog);
-        setMessage({ error: false, msg: "New Blog added successfully!" });
-      }
+      } 
     } catch (err) {
       setMessage({ error: true, msg: err.message });
     }
@@ -83,7 +82,7 @@ const EditBlog = ({ id, setBlogId })=>{
     const editHandler = async () => {
       setMessage("");
       try {
-        const docSnap = await BlogDataService.getBlog(id);
+        const docSnap = await BlogDataService.getBlog(id_);
         console.log("the record is :", docSnap.data());
       setName(docSnap.data().name);
       setTime(docSnap.data().time);
@@ -101,14 +100,16 @@ const EditBlog = ({ id, setBlogId })=>{
       } catch (err) {
         setMessage({ error: true, msg: err.message });
       }
+
+      
     };
   
     useEffect(() => {
-      console.log("The id here is : ", id);
-      if (id !== undefined && id !== "") {
+      console.log("The id here is : ", id_);
+      if (id_ !== undefined && id_ !== "") {
         editHandler();
       }
-    }, [id]);
+    }, [id_]);
     
       
 
@@ -166,7 +167,7 @@ const EditBlog = ({ id, setBlogId })=>{
         <div className="EditPage">
        
             <div className="row1">
-          <h1>Add A Blog </h1>
+          <h1>Edit A Blog </h1>
           <div className='subrow1'>
           <button
             onClick={() => {

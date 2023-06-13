@@ -1,10 +1,5 @@
 import './blogbody.css';
-import Bimage1 from '../assets/blog1.png';
-import Bimage2 from '../assets/blog2.png';
-import Bimage3 from '../assets/blog3.png';
-import Bimage4 from '../assets/blog4.png';
-import Bimage5 from '../assets/blog5.png';
-import Bimage6 from '../assets/blog6.png';
+
 import Bauthor from '../assets/blogauth.png';
 import Bcards from './Bcards/Bcards';
 import { useEffect, useState } from 'react';
@@ -35,7 +30,7 @@ function BlogBody(){
                     if(doc.hidden==false){
                         return(
 
-                            <Bcards url={doc.imgUrl} title={doc.btitle} authImage={Bauthor} authName = {doc.name} detail={doc.date + " " + doc.time} id={doc.id} />
+                            <Bcards url={doc.imgUrl} title={doc.btitle} authImage={Bauthor} authName = {doc.name} detail={doc.date + " • " + doc.time} id={doc.id} />
                             
                                               );
                     }

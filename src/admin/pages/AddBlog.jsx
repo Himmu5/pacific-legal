@@ -42,7 +42,7 @@ function AddBlog(){
             getDownloadURL(uploadTask.snapshot.ref).then((url) => {
                 console.log(url);
                 setImgUrl(url);
-                handleSubmit()
+                handleSubmit(url)
             });
         }
     ); 
@@ -66,7 +66,7 @@ function AddBlog(){
         const [message, setMessage] = useState({ error: false, msg: "" });
 
        
-  const handleSubmit = async () => {
+  const handleSubmit = async (url) => {
     console.log("working")
     // e.preventDefault();
     setMessage("");
@@ -75,7 +75,7 @@ function AddBlog(){
       return;
     }
     const newBlog = {
-      imgUrl,
+      imgUrl : url,
      name,
      time,
      date,

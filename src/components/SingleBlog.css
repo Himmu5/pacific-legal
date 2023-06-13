@@ -98,7 +98,10 @@ object-fit: cover;
     border-radius: 0px;
     margin-bottom: 4px;
   }
-  
+  .profile-image{
+    width: 15%;
+    height: 110%;
+  }
   .profile-img-details {
     display: flex;
     flex-direction: row;

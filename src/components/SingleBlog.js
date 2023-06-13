@@ -11,7 +11,7 @@ import comp9 from "../assets/smile.png";
 import comp10 from "../assets/camera.png";
 import comp11 from "../assets/videocamera.png";
 import comp12 from "../assets/gif.png";
-
+import pfp from "../assets/pfp.png";
 import Bimage1 from "../assets/blog1.png";
 import Bimage2 from "../assets/blog2.png";
 import Bauthor from "../assets/blogauth.png";
@@ -24,6 +24,18 @@ import BlogDataService from '../admin/backend/firestore'
 
 
 function SingleBlog() {
+  const [blogId, setBlogId] = useState("");
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    getBlogs();
+  }, []);
+
+  const getBlogs = async () => {
+      const data = await BlogDataService.getAllBlog();
+      console.log(data.docs);
+      setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
     const queryParameters = new URLSearchParams(window.location.search)
     const id = queryParameters.get("id")
     // console.log("id is ", id);
@@ -74,12 +86,12 @@ function SingleBlog() {
         <div className="b2">
           <div className="info-bar">
             <div className="profile-img-details">
-              <img className="profile-image" src={comp2} alt="profile-image" />
+              <img className="profile-image" src={pfp} alt="profile-image" />
               <div className="name-info">
                 <div className="name">{bauthor}</div>
                 <div className="date-time">
-                  {bdate}{" "}
-                  <img className="dot" src={comp4} alt="dot-image" /> {btime}
+                  {bdate}{"  •  "}
+                 {btime}
                 </div>
               </div>
             </div>
@@ -178,20 +190,20 @@ function SingleBlog() {
           <div className="b-container">
             <h1 className="b-head"> All Post</h1>
             <div className="b-cards">
-              <Bcards
-                url={Bimage1}
-                title={"Short-Term Residence permit in Turkey"}
-                authImage={Bauthor}
-                authName={"Avi Aporve Khanna"}
-                detail={"May 10, 2022   4 min"}
-              />
-              <Bcards
-                url={Bimage2}
-                title={"Medical Malpractice Cases in Turkey"}
-                authImage={Bauthor}
-                authName={"Avi Aporve Khanna"}
-                detail={"May 10, 2022   4 min"}
-              />
+
+              
+          {  blogs.map((doc, index) => {
+                {
+                    if(doc.hidden==false){
+                        return(
+
+                            <Bcards url={doc.imgUrl} title={doc.btitle} authImage={Bauthor} authName = {doc.name} detail={doc.date + " " + doc.time} id={doc.id} />
+                            
+                                              );
+                    }
+                }})
+              }
+
             </div>
           </div>
         </div>

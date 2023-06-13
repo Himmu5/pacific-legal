@@ -78,7 +78,7 @@ const BlogCard = ({ getBlogId }) => {
             <button  onClick={()=>{
               navigate('/blogs?id='+doc.id)
             }}>View</button>
-                <button  onClick={(e) =><EditBlog id={blogId} setBlogId={setBlogId} />}>Edit</button>
+                <button  onClick={(e) => navigate('/editblog?id='+doc.id)  }>Edit</button>
                 <button onClick={()=>{
                   EditStatusBlog(doc.id, doc.hidden)
                 }}>{doc.hidden?"Unhide":"Hide"}</button>
