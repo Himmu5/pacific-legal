@@ -4,7 +4,8 @@ import uploadimg from '../../assets/upload.png'
 // import { useState } from 'react';
 import React, { useState, useEffect, useRef } from "react";
 import BlogDataService from "../backend/firestore";
-
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 import {
   ref,
@@ -16,6 +17,7 @@ import { storage } from '../backend/firebase';
 
 
 function AddBlog(){
+  const [value, setValue] = useState('');
 
   const [percent, setPercent] = useState(0);
   function handleUpload() {
@@ -247,7 +249,11 @@ function AddBlog(){
             </div>
             <div className='editblogcontent'>
                 <h4>Blog Content</h4>
-                <textarea className='admin-bcontent-input' placeholder='Type Here..' value={bcontent} onChange={handleChangebcontent}></textarea>
+                <ReactQuill theme="snow" value={bcontent} onChange={() => setBcontent} />
+
+                {/* <textarea className='admin-bcontent-input' placeholder='Type Here..' value={bcontent} onChange={handleChangebcontent}></textarea>
+             */}
+            
             </div>
 
 

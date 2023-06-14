@@ -66,7 +66,7 @@ line-height: 21px;
 /*footer image */
 .f-image{
     width: 90px;
-height: 61px;
+height: 90px;
 margin-top: 215px;
 margin-right: -40px;
 }
@@ -99,6 +99,7 @@ margin-left: 15px;
 
 /*footer list*/
 .f-list{
+    margin-right:-16px;
     list-style-type: none;
     margin-top: -20px;
     font-family: 'EB Garamond', serif;

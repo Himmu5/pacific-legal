@@ -4,6 +4,8 @@ import uploadimg from '../../assets/upload.png'
 // import { useState } from 'react';
 import React, { useState, useEffect } from "react";
 import BlogDataService from "../backend/firestore";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 
 
@@ -228,7 +230,11 @@ const EditBlog = ({ id, setBlogId })=>{
             </div>
             <div className='editblogcontent'>
                 <h4>Blog Content</h4>
-                <textarea className='admin-bcontent-input' placeholder='Type Here..' value={bcontent} onChange={handleChangebcontent}></textarea>
+                <ReactQuill theme="snow" value={bcontent} onChange={() => setBcontent} />
+
+                {/* <textarea className='admin-bcontent-input' placeholder='Type Here..' value={bcontent} onChange={handleChangebcontent}></textarea>
+             */}
+            
             </div>
 
 
