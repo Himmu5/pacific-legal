@@ -1,74 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap');
 
-.about-body{
-    display: flex;
+
+.About-box{
+    display:flex;
     flex-direction: row;
-    justify-content: center;
-    margin-bottom: 125px;
+    padding:3rem;
+ 
+
+
 }
 
-@media only screen and (max-width:1200px) {
-    .about-body{
+@media only screen and (max-width: 1144px) 
+{
+    .About-box{
         display: flex;
         flex-direction: column;
-        align-items: center;
-    
     }
-    
 }
 
-.b1{
-    width: 40%;
-}
-.b2{
-    width: 40%;
-  
+
+.text-box{
+    margin-left: 60px;
 }
 
-.a-image{
-   margin-top: 114px;
-width: 465px;
-height: 500px;
-left: 108px;
-top: 570px;
-border-radius: 26px;
+
+@media only screen and (max-width: 700px) 
+{
+    
+.text-box{
+    margin-left: 10px;
+   
 }
 
-@media only screen and (max-width: 850px) {
-    .a-image{
-        margin-top: 114px;
-        width: 405px;
-        height: 370px;
-        margin-left: -81px;
-       
-        border-radius: 26px;
-        }
-
-        .a-head{
-            margin-top: 100px;;
-        }
-    }
-    
-    
-@media only screen and (max-width: 400px) {
-    .a-image{
-        
-        width: 331px;
-        height: 310px;
-        margin-left: -91px;
-       
-        border-radius: 26px;
-        }
-
-        
-    }
-    
-
-
-.a-head{
-    margin-top: 180px;
-    margin-bottom: 0px;
-font-family: 'EB Garamond', serif;
+}
+.A-head{
+    font-family: 'EB Garamond', serif;
 font-style: normal;
 font-weight: bold;
 font-size: 48px;
@@ -76,8 +42,7 @@ line-height: 130%;
 
 color: #17181E;
 }
-.a-text{
-   
+.A-text{
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
@@ -85,5 +50,25 @@ color: #17181E;
     line-height: 32px; 
     text-align: justify;
     color: #111111;
-    padding-bottom: 20px;
+}
+
+.image{
+    height:500px;
+    width:500px;
+}
+
+@media only screen and (max-width: 700px) 
+{
+    
+.image{
+    margin-left: 10px;
+   
+}
+}
+@media only screen and (max-width: 572px) 
+{
+.image{
+    height: 250px;
+    width: 300px;
+}
 }

@@ -5,25 +5,25 @@ import CTAButton from "./CTAButton/CTAButton";
 function AboutBody() {
   return (
     <>
-      <div className="about-body">
-        <div className="b1">
-        <img className="a-image" src={comp3} alt="About-Us-Image" />
+    
+      <div className="About-box">
+        <div className="img-box">
+          <img className="image" src = {comp3} alt ='About-Us-image'/>
         </div>
 
-        <div className="b2">
-          <h2 className="a-head">About Us</h2>
-          <p className="a-text">
-            Pacific Legal is dedicated to working with clients to help them
-            achieve their business goals and overcome legal challenges anywhere
-            in the world. From a global platform spanning 2 countries, Pacific
-            Legal lawyers help clients succeed. We are committed to helping
+        <div className="text-box"> 
+        <h2 className="A-head">About US</h2>
+        <p className="A-text">
+          Pacific Legal is dedicated to working with clients to help them achieve their business
+          goals and overcome legal challenges anywhere in the world. From a global platform spanning 
+          2 countries, Pacific Legal lawyers help clients succeed. We are committed to helping
             clients achieve their business strategies and providing outstanding
             legal services around the world. Clients depend on the firm to find
             innovative solutions to complex business issues, and Pacific Legal
             lawyers leverage the firm’s global platform to help clients handle
             these challenges.
-          </p>
-          <div><CTAButton title="Get in touch" /></div>
+        </p>
+
         </div>
       </div>
     </>
