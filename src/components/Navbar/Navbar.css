@@ -110,6 +110,10 @@ gap: 0.5rem;
 }
 
 @media only screen and (max-width: 600px) {
+  .companytitle{
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+  }
   .items{
     display: flex;
     padding-left: 2rem;
@@ -131,7 +135,7 @@ gap: 0.5rem;
     align-items: center;
   }
   .menu{
-    width: 3rem;
+    width: 2rem;
     display: block;
   }
   .freeconsult-form{

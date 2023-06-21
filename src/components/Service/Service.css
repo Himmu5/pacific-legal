@@ -2,26 +2,34 @@
     width: 350px;
     height: 230px;
     background-repeat: no-repeat;
+    display: flex;
     background-size: cover;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 0.5rem;
+    background-color: orange;
     
 }
 
 
 .servicetitle{
+    /* background-color: orange; */
 text-align: start;
-padding-left: 2rem;
-padding-top: 2rem;
+margin-top: 2rem;
+margin-left: 2rem;
+margin-right: 2rem;
+/* padding-left: 2rem;
+padding-right: 2rem;
+padding-top: 2rem; */
 /* padding: 2rem 2rem; */
 font-size: 1.5rem;
 color: white;
-width: 310px;
+/* width: 310px; */
 }
 
 
 .learn-more{
-    padding-left: 2rem;
+    padding-left: 1rem;
     padding-bottom: 2rem;
+   
 }

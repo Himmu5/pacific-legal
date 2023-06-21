@@ -53,15 +53,18 @@ function Home() {
         </div>
       </div>
 
+
       <div className="whoarewe">
         <h2>Who Are We?</h2>
         <p>{whoarewe}</p>
       </div>
 
       <div className="services">
+        <div className="services-header">
         <h2 className="services-header-title">Our Services</h2>
         <p>{ourservices}</p>
 
+        </div>
         <div className="services-tiles-parent">
           <Service title="Commercial Contract Review" url={service1} />
           <Service

@@ -133,6 +133,7 @@ padding: 14px 38px 14px 38px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   .contact-box {

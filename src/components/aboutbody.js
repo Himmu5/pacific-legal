@@ -24,6 +24,8 @@ function AboutBody() {
             these challenges.
         </p>
 
+        <CTAButton title="Get In Touch"/>
+ 
         </div>
       </div>
     </>

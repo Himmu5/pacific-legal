@@ -18,6 +18,7 @@ function ServiceBody(){
                 Business Law
                 </h1>
 
+
                 <p className='s-para'>
                 The Business Law Group at Pacific Legal offers a complete range of corporate and commercial legal services delivered by a dynamic and experienced team. Corporate transactions 
                 are a core feature of the modern commercial world; Pacific Legal regularly advises on a range of complex transactions, including mergers and acquisitions, equity and debt
