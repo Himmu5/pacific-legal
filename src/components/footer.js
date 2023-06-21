@@ -48,9 +48,9 @@ function Footer(){
                     <li> Email <br/>  ertioo@gmail.com</li>
                  
                     <div className='socials'>
-                        <Link to="#"> <img className='s-l' src ={Fface}/></Link>
-                        <Link to="#"><img className='s-l' src ={Finsta}/></Link>
-                        <Link to="#"><img className='s-l' src={Flinkd}/></Link>
+                        {/* <Link to="#"> <img className='s-l' src ={Fface}/></Link>
+                        <Link to="#"><img className='s-l' src ={Finsta}/></Link> */}
+                        <Link to="https://www.linkedin.com/in/avikhanna"><img className='s-l' src={Flinkd}/></Link>
                     
                     
                     
