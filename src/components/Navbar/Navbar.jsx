@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 import CTAButton from '../CTAButton/CTAButton';
-import {  Link } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import menu from '../../assets/menu.png';
 import { useState } from 'react';
 import Modal from 'react-modal';
@@ -11,7 +11,7 @@ import close from '../../assets/close.png'
 function Navbar(props) {
 
   const home="HOME", blog="BLOG", team = "THE TEAM", services="SERVICES", practices="PRACTICES", contact="CONTACT US", about="ABOUT";
-
+const navigate = useNavigate();
   const customStyles = {
     content: {
       top: '50%',
@@ -76,7 +76,7 @@ function Navbar(props) {
       </Modal>
 <div className='nav-r1-c-all'>
 <div className='nav-r1-c1'>
-<img src={logo} alt="" className='logo'/>
+<img src={logo} alt="" className='logo' onClick={()=>{navigate('/')}}/>
 <p className='companytitle'>Pacific Legal Professional Corporation</p>
 </div>
 <div className='right-content'>

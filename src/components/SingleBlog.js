@@ -80,7 +80,7 @@ function SingleBlog() {
         <Hero title={btitle}/>
       <div className="Medical-body">
         <div className="b1">
-          <img className="m-image" src={imgurl} alt="MedicalBody-Image" />
+           <img className="m-image" src={imgurl} alt="MedicalBody-Image" />
         </div>
 
         <div className="b2">
@@ -110,7 +110,7 @@ function SingleBlog() {
 
           <div className="partation-line"></div>
           <div className="share-post">
-            <span>Share post</span>
+            <p style={{"fontSize": "1.3rem"}}>Share Post</p>
             <div class="links">
               <a target="_blank" href="#">
                 <img
@@ -144,7 +144,7 @@ function SingleBlog() {
           </div>
           <div className="comment-section">
             <div className="comment-wh-body">
-              <h2>Leave a comment</h2>
+              <h3 style={{"fontSize": "1.4rem"}}>Leave a comment</h3>
               <div className="comment-box">
                 <textarea className="leave-comment" placeholder="Write a comment" />
                 <div className="commentbox-line"></div>

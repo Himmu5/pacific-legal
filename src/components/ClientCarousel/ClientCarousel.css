@@ -5,9 +5,15 @@
 overflow-y: hidden;
 }
 
+.arrows{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
 
-
-
+.change-slide{
+    height: 3rem;
+}
 @media only screen and (max-width: 600px) {
     .carousel-slider{
         overflow-x: hidden;

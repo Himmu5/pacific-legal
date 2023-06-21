@@ -1,6 +1,8 @@
 import { useState } from "react";
 import CarouselCard from "./CarouselCard";
 import "./ClientCarousel.css";
+import left from '../../assets/left.png'
+import right from '../../assets/right.png'
 
 const ClientCarousel = () => {
     var testimonialslen = 6
@@ -31,7 +33,17 @@ function calculatePrevious(middle){
             <CarouselCard active={false} index={calculatePrevious(middle)}/>
         </div>
             }
-        {<CarouselCard active={true} index = {middle}/>}
+        {<div>
+            <CarouselCard active={true} index = {middle}/>
+            <br></br>
+            <div className="arrows">
+                
+            <img src={left} alt="" srcset="" className="change-slide" onClick={()=>setMiddle(calculatePrevious(middle))}/>
+            <img src={right} alt="" srcset="" className="change-slide" onClick={()=>setMiddle(calculateNext(middle))}/>
+            </div>
+        </div>
+            
+            }
         {
             <div onClick={()=>setMiddle(calculateNext(middle))}>
                 <CarouselCard active={false} index={calculateNext(middle)}/>
