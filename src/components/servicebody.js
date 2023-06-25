@@ -6,7 +6,7 @@ import Simage3 from '../assets/service3.png';
 import Simage4 from '../assets/service4.png'; 
 import Simage5 from '../assets/service5.png'; 
 import Simage6 from '../assets/service6.png'; 
-
+import { Link } from 'react-router-dom';
 
 
 function ServiceBody(){
@@ -33,14 +33,14 @@ function ServiceBody(){
             </div>
 
             <div className='s-cardbox'>
-            <Scards  title="Commencing a Business Entity" url={Simage1}/>
-            <Scards title="General Corporate Advisory" url={Simage2}/>
-            <Scards title="Purchase and Sale of Businesses" url={Simage3}/>
+          <Link to = "/business-entity" ><Scards  title="Commencing a Business Entity" url={Simage1}/></Link> 
+          <Link to = "/general-corporate" > <Scards title="General Corporate Advisory" url={Simage2}/></Link> 
+          <Link to = "/purchase-sale" > <Scards title="Purchase and Sale of Businesses" url={Simage3}/></Link> 
             </div>
             <div className='s-cardbox'>
-            <Scards title="Commercial Contracts " url={Simage4} />
-            <Scards title="Public Company Regulatory Compliance and Reporting " url={Simage5}/>
-            <Scards title=" Corporate Immigration" url={Simage6}/>
+            <Link to = "/commerical-contract" ><Scards title="Commercial Contracts " url={Simage4} /></Link> 
+            <Link to = "/public-company" > <Scards title="Public Company Regulatory Compliance and Reporting " url={Simage5}/></Link> 
+            <Link to = "/corporate-immigration" >  <Scards title=" Corporate Immigration" url={Simage6}/></Link> 
 
             </div>
          </div>

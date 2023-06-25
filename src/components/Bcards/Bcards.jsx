@@ -1,6 +1,6 @@
 import '../Bcards/Bcards.css'
 import {  Link, useNavigate } from "react-router-dom";
-import pfp from "../../assets/pfp.png";
+import blogauth from "../../assets/blogauth.png";
 
 function Bcards(props){
     const url = props.url;
@@ -19,7 +19,7 @@ function Bcards(props){
         <h3 className='bcardtitle'>
             <Link to = "/medical"> {title} </Link></h3>
         <div className='bd-box'>
-        <img className='bcardauthor' src={pfp}/> 
+        <img className='bcardauthor' src={blogauth}/> 
         <div className='bnt-box'>
         <h4 className='bcardname'>{authName}</h4>
         <h7 className='bcarddetail'>{detail} </h7>

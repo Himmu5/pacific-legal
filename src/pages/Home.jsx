@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import dawn from "../assets/Dawn.png";
 import "./Home.css";
+import {  Link, useNavigate } from "react-router-dom";
 import CTAButton from "../components/CTAButton/CTAButton";
 import building from "../assets/building.png";
 import justice from "../assets/justice.png";
@@ -36,7 +37,7 @@ function Home() {
               <p className="company-subtitle">
                 Lawyers For Emerging And High Growth Companies.
               </p>
-              <CTAButton title="Services" />
+              <Link to="/services"><CTAButton title="Services" /></Link>
             </div>
             <div>
               <p>info@pacificlegal.ca</p>
@@ -66,15 +67,15 @@ function Home() {
 
         </div>
         <div className="services-tiles-parent">
-          <Service title="Commercial Contract Review" url={service1} />
-          <Service
+        <Link to = "/commerical-contract" >  <Service title="Commercial Contract Review" url={service1} /></Link>
+        <Link to = "/public-company" >   <Service
             title="Public Company Regulatory Compliance and Reporting"
             url={service2}
-          />
-          <Service title="Terms of Service and Privacy Policy" url={service3} />
-          <Service title="Corporate Immigration" url={service4} />
-          <Service title="General Corporate Advisory" url={service5} />
-          <Service title="Purchase and Sale of Businesses" url={service6} />
+          /></Link>
+         <Link to = "/business-entity" >  <Service title="Terms of Service and Privacy Policy" url={service3} /></Link>
+         <Link to = "/corporate-immigration" >   <Service title="Corporate Immigration" url={service4} /></Link>
+         <Link to = "/general-corporate" >   <Service title="General Corporate Advisory" url={service5} /></Link>
+         <Link to = "/purchase-sale" >   <Service title="Purchase and Sale of Businesses" url={service6} /></Link>
         </div>
       </div>
 

@@ -35,8 +35,10 @@ font-weight: 600;
     margin-top: 5rem;
     margin-bottom: 7rem;
 }
-
+.scardtile:hover{
+    filter: grayscale(100%);
+}
 .scardbtn{
-   margin: 30px;
-
+margin:30px;
+margin-bottom: 10px;
 }

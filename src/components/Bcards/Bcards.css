@@ -13,6 +13,7 @@
 .bcardtile:hover{
     transform: scale(1.02);
     transition: 0.4s;
+ 
 }
 .tileimg{
     width: 392px;

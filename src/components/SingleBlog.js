@@ -11,7 +11,7 @@ import comp9 from "../assets/smile.png";
 import comp10 from "../assets/camera.png";
 import comp11 from "../assets/videocamera.png";
 import comp12 from "../assets/gif.png";
-import pfp from "../assets/pfp.png";
+import blogauth from "../assets/blogauth.png";
 import Bimage1 from "../assets/blog1.png";
 import Bimage2 from "../assets/blog2.png";
 import Bauthor from "../assets/blogauth.png";
@@ -19,11 +19,37 @@ import Bcards from "./Bcards/Bcards";
 import Footer from "./footer";
 import Hero from "./Hero/Hero";
 import Navbar from "./Navbar/Navbar";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Modal from 'react-modal';
+import close from '../assets/close.png';
 import BlogDataService from '../admin/backend/firestore'
 
 
 function SingleBlog() {
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      height: "20vh",
+      width: "70vw"
+    },
+  };
+  const [modalIsOpen, setIsOpen] = useState(false);
+ 
+  function openModal() {
+    setIsOpen(true);
+  }
+
+
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   const [blogId, setBlogId] = useState("");
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
@@ -76,6 +102,58 @@ function SingleBlog() {
     }, [])
   return (
     <>
+
+    {/* Modal share a post */}
+    <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        
+        contentLabel="Modal"
+      >
+      <div className="share-post-modal">
+        <div  onClick={closeModal} className='close-form' style={{"position": "absolute", "top": "2rem", "left": "2rem", "cursor": "pointer"}}>
+           <img src={close} alt="" srcset="" height={"10rem"} />
+        </div>
+        <div className="modal-content">
+          <h1 className="modal-head">Share post</h1>
+          <div className="modal-links">
+          <a target="_blank" href="#">
+                <img
+                  className="m-sharelogo"
+                  src={comp5}
+                  alt="MedicalBody-Image"
+                />
+              </a>
+              <a target="_blank" href="#">
+                <img
+                  className="m-sharelogo"
+                  src={comp6}
+                  alt="MedicalBody-Image"
+                />
+              </a>
+              <a target="_blank" href="#">
+                <img
+                  className="m-sharelogo"
+                  src={comp7}
+                  alt="MedicalBody-Image"
+                />
+              </a>
+              <a target="_blank" href="#">
+                <img
+                  className="m-sharelogo"
+                  src={comp8}
+                  alt="MedicalBody-Image"
+                />
+              </a>
+          </div>
+        </div>
+       
+
+      </div> 
+      </Modal>
+
+    {/* end of modal  */}
     <Navbar index={1}/>
         <Hero title={btitle}/>
       <div className="Medical-body">
@@ -86,7 +164,7 @@ function SingleBlog() {
         <div className="b2">
           <div className="info-bar">
             <div className="profile-img-details">
-              <img className="profile-image" src={pfp} alt="profile-image" />
+              <img className="profile-image" src={blogauth} alt="profile-image" />
               <div className="name-info">
                 <div className="name">{bauthor}</div>
                 <div className="date-time">
@@ -96,8 +174,9 @@ function SingleBlog() {
               </div>
             </div>
             <div className="share-bt">
-              <img className="share-button" src={comp3} alt="share-button" />
+       <Link onClick={openModal}>   <img className="share-button" src={comp3} alt="share-button" /></Link>
             </div>
+
           </div>
           <div className="partation-line"></div>
           
@@ -110,7 +189,7 @@ function SingleBlog() {
 
           <div className="partation-line"></div>
           <div className="share-post">
-            <p style={{"fontSize": "1.3rem"}}>Share Post</p>
+            <p style={{"fontSize": "1.5rem"}}>Share Post</p>
             <div class="links">
               <a target="_blank" href="#">
                 <img
@@ -145,9 +224,9 @@ function SingleBlog() {
           <div className="comment-section">
             <div className="comment-wh-body">
               <h3 style={{"fontSize": "1.4rem"}}>Leave a comment</h3>
-              <div className="comment-box">
+              {/* <div className="comment-box"> */}
                 <textarea className="leave-comment" placeholder="Write a comment" />
-                <div className="commentbox-line"></div>
+                {/* <div className="commentbox-line"></div>
                 <div className="add-item-logo">
                   <img
                     className="add-item-image"
@@ -173,8 +252,8 @@ function SingleBlog() {
                     id="gif"
                     alt="add-item-image"
                   />
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
 
               <div className="btn-commentbox">
                 <button className="btn-comment" id="publish-btn">

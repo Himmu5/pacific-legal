@@ -10,7 +10,9 @@
     background-color: orange;
     
 }
-
+.servicetile:hover{
+    filter: grayscale(100%);
+}
 
 .servicetitle{
     /* background-color: orange; */
@@ -29,6 +31,7 @@ color: white;
 
 
 .learn-more{
+    margin-bottom: -14px;
     padding-left: 1rem;
     padding-bottom: 2rem;
    

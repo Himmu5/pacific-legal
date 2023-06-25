@@ -17,4 +17,6 @@ font-size: 1.8rem;
 color: white;
 width: 240px;
 }
-
+.areatile:hover{
+    filter: grayscale(100%);
+}

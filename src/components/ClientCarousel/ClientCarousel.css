@@ -13,6 +13,7 @@ overflow-y: hidden;
 
 .change-slide{
     height: 3rem;
+    margin-left: auto;
 }
 @media only screen and (max-width: 600px) {
     .carousel-slider{

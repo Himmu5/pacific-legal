@@ -48,7 +48,7 @@ const navigate = useNavigate();
       >
       <div className="freeconsult-form">
         <div  onClick={closeModal} className='close-form' style={{"position": "absolute", "top": "2rem", "left": "2rem", "cursor": "pointer"}}>
-           <img src={close} alt="" srcset="" height={"30rem"} />
+           <img src={close} alt="" srcset="" height={"10rem"} />
         </div>
         <div className='free-consult-left'>
         <div className="free-consult-form-fields">

@@ -17,6 +17,18 @@
     
 }
 
+@media only screen and (min-width: 800px){
+  #team2{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  #text2{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  
+}
+
 .t-image {
   height: 500px;
   width: 465px;

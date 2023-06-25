@@ -62,6 +62,7 @@ object-fit: cover;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin-left: 10px;
   }
   
   /* ######### AUTHOR DETAILS ############# */
@@ -82,7 +83,7 @@ object-fit: cover;
   
   @media  (max-width: 600px) {
     .partation-line {
-      width: 345px;
+      width: 100%;
       height: 6px;
     }
   }
@@ -96,7 +97,7 @@ object-fit: cover;
     letter-spacing: 0em;
     text-align: left;
   }
-  
+     
   .date-time {
     font-family: Helvetica;
     font-size: 16px;
@@ -104,6 +105,7 @@ object-fit: cover;
     line-height: 25px;
     letter-spacing: 0em;
     text-align: left;
+    width: max-content;
   }
   .dot {
     height: 4px;
@@ -114,7 +116,7 @@ object-fit: cover;
     margin-bottom: 4px;
   }
   .profile-image{
-    width: 15%;
+   
     height: 110%;
   }
   .profile-img-details {
@@ -169,6 +171,9 @@ object-fit: cover;
     text-align: left;
     margin-right: 40px;
   }
+  .links{
+    margin-top: 15px;
+  }
   
   .m-sharelogo {
     height: 40px;
@@ -188,19 +193,28 @@ object-fit: cover;
     border-radius: 30px;
   }
   
-  .comment-box {
+  /* .comment-box {
     box-sizing: border-box;
-    height: 260px;
+    height: 90px;
     left: 158px;
     top: 4009px;
   
     border: 1px solid #000000;
     border-radius: 8px;
-  }
-  .leave-comment{
+  } */
+
+.leave-comment{
+height: 100px;
+
+ box-sizing: border-box;
+ border:1px solid #000000;
+ border-radius: 8px;
+}
+
+  /* .leave-comment{
     height:5rem;
     width:99%;
-  }
+  } */
   .commentbox-line {
     width: 1034px;
     height: 0px;
@@ -278,3 +292,18 @@ object-fit: cover;
   }
   
   
+
+
+  /* modal  style*/
+
+  .modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media  (max-width: 600px) {
+   .share-bt{
+    margin-right: 30px;
+   }
+  }
