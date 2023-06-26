@@ -152,3 +152,8 @@
   letter-spacing: 0em;
   text-align: justified;
 }
+
+
+.read-more{
+  text-decoration: underline;
+}

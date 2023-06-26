@@ -115,11 +115,22 @@ gap: 0.5rem;
     font-size: 1rem;
   }
   .items{
-    display: flex;
+    /* display: flex;
     padding-left: 2rem;
     flex-direction: column;
     gap: 3rem;
-    align-items: center;
+    align-items: center; */
+    display: flex;
+padding-left: 11rem;
+flex-direction: column;
+gap: 3rem;
+align-items: center;
+background-color: #FFEFCC;
+position: fixed;
+padding-right: 15rem;
+z-index: 1;
+padding-bottom: 1rem;
+padding-top: 1rem;
   }
   .items-desktop{
     display: none;
