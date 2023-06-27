@@ -48,7 +48,7 @@ function calculatePrevious(middle){
         {
             <div onClick={()=>setMiddle(calculateNext(middle))}>
                 <CarouselCard active={false} index={calculateNext(middle)}/>
-                <div>
+                <div className="arrows2">
                 <img src={left} alt="" srcset="" className="change-slide" onClick={()=>setMiddle(calculateNext(middle))}/>
             </div>
             </div>

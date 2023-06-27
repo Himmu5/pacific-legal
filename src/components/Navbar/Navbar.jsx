@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png';
 import CTAButton from '../CTAButton/CTAButton';
 import {  Link, useNavigate } from "react-router-dom";
 import menu from '../../assets/menu.png';
+import menuclose from '../../assets/menuclose.png';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import close from '../../assets/close.png'
@@ -36,6 +37,7 @@ const navigate = useNavigate();
   function closeModal() {
     setIsOpen(false);
   }
+
   
   return (
 <>
@@ -84,10 +86,24 @@ const navigate = useNavigate();
 <CTAButton title="Free consultation" handleClick={openModal}/>
 </div>
 <div>
-  <img src={menu} alt="" className='menu' onClick={()=>{
-    setMenuOpened(!isMenuOpened);
+  {/* <img src={menu} alt="" className='menu' onClick={()=>{
+    
+    setMenuOpened(!isMenuOpened) 
     console.log(isMenuOpened)
   }} />
+  */}
+ <div className='menu'>
+  <label className='check' >
+<input type="checkbox" id="check" onClick={()=>{
+    setMenuOpened(!isMenuOpened) 
+    console.log(isMenuOpened)
+  }} /> 
+      <span></span>
+      <span></span>
+      <span></span>
+      </label>
+      </div>
+   
 </div>
 </div>
 

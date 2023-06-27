@@ -9,6 +9,22 @@ overflow-y: hidden;
     display: flex;
     justify-content: center;
     gap: 3rem;
+    margin-top:-160px;
+}
+@media only screen and (max-width: 600px) {
+    .arrows{
+        margin-top: -260px;
+    }
+}
+
+.arrows2{
+   
+    margin-top:-160px;
+}
+@media only screen and (max-width: 600px) {
+    .arrows2{
+        margin-top: -260px;
+    }
 }
 
 .change-slide{
