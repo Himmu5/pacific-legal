@@ -1,5 +1,5 @@
 import Hero from "../components/Hero/Hero";
-import s4 from "../assets/s4.png";
+import s4 from "../assets/s4.jpg";
 import CTAButton from "../components/CTAButton/CTAButton";
 import "./SingleService.css";
 import data from "../data/services";

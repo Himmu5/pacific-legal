@@ -38,21 +38,22 @@ function TeamBody() {
             reorganizations, cybersecurity and data protection, corporate
             governance, venture capital, and private equity law. He has led
             frequent private placement transactions on behalf of publicly listed
-            companies at TSX, TSXV, and CSE.  &nbsp;
-             <a href="#" onClick={toggleReadMore}>
+            companies at TSX, TSXV, and CSE. <br></br>
+            Prior to being called to the Ontario bar, Avi acted as a Legal Consultant for a series of Canadian companies covering industries such as travel, real estate, and software tech, where he contributed substantially to enhancing the legal structure boosting the client's global expansion to the EU, UK, and the USA. He was actively involved in helping his clients to receive grants from angel investors and led his clients at international investment events, including "TIECon 2019", the world's largest ecosystem of venture capitalists and angel investors at Silicon Valley, USA
+<br></br>
+B.A. LL.B (Hons)
+<br></br>
+LL.M, McGill University
+<br></br>
+Professional Affiliations Law Society of Ontario (Canada) Bar Council of Delhi (India)
+             {/* <a href="#" onClick={toggleReadMore}>
        <b className="read-more">Read more</b>
       </a>
       {readMore && (
         <p className="t-text">
-          Prior to being called to the Ontario bar, Avi acted as a Legal Consultant for a series of Canadian companies covering industries such as travel, real estate, and software tech, where he contributed substantially to enhancing the legal structure boosting the client's global expansion to the EU, UK, and the USA. He was actively involved in helping his clients to receive grants from angel investors and led his clients at international investment events, including "TIECon 2019", the world's largest ecosystem of venture capitalists and angel investors at Silicon Valley, USA
-
-B.A. LL.B (Hons)
-
-LL.M, McGill University
-
-Professional Affiliations Law Society of Ontario (Canada) Bar Council of Delhi (India)
+          
         </p>
-      )}
+      )} */}
           </p>
      
         </div>
@@ -79,15 +80,16 @@ Professional Affiliations Law Society of Ontario (Canada) Bar Council of Delhi�
            Council of India since 2014. The key areas of practice include Intellectual Property Rights - trade
             marks, copyright and designs. Kangan has represented eminent and acclaimed companies from sectors
              like Fast Moving Consumer Goods (FMCG) sector, Pharmaceuticals sector, Food & Beverages (F&B) 
-             sector, Information Technology sector, Banking sector and others.
-&nbsp;
+             sector, Information Technology sector, Banking sector and others.<br></br>
+             She has gained a comprehensive understanding and deep knowledge of the industry requirements relating to the role intellectual the business. She is also consistent with her appearance in various Courts and Tribunals, pan India, in matters relating to trade marks, copyright, designs, other IP enforcement actions and other hearings before the Trade Marks Registry and Intellectual Property Appellate Board in India.
+
+{/* &nbsp;
              <a href="#" onClick={toggleReadMore}>
        <b className="read-more">Read more</b>
       </a>
       {readMore && (
         <p className="t-text">
-         She has gained a comprehensive understanding and deep knowledge of the industry requirements relating to the role intellectual the business. She is also consistent with her appearance in various Courts and Tribunals, pan India, in matters relating to trade marks, copyright, designs, other IP enforcement actions and other hearings before the Trade Marks Registry and Intellectual Property Appellate Board in India.</p>
-      )}
+             )} */}
           </p>
         </div>
 
@@ -107,7 +109,7 @@ Professional Affiliations Law Society of Ontario (Canada) Bar Council of Delhi�
            Law Clerk
           </h3>
           <p className="t-text">
-          Munira has a background of 10+ years of cumulative working experience, including 7 years as an Executive Assistant to high profile directors in the petroleum and steel industries in the African market. She is highly proficient in office administration, and documentation. She is also studying to be a Paralegal in Ontario.Read more
+          Munira has a background of 10+ years of cumulative working experience, including 7 years as an Executive Assistant to high profile directors in the petroleum and steel industries in the African market. She is highly proficient in office administration, and documentation. She is also studying to be a Paralegal in Ontario.
           </p>
         </div>
 

@@ -98,9 +98,9 @@ const navigate = useNavigate();
     setMenuOpened(!isMenuOpened) 
     console.log(isMenuOpened)
   }} /> 
-      <span></span>
-      <span></span>
-      <span></span>
+      <span className='nav-span'></span>
+      <span className='nav-span'></span>
+      <span className='nav-span'></span>
       </label>
       </div>
    

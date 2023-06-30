@@ -1,8 +1,9 @@
 import { useState } from "react";
 import CarouselCard from "./CarouselCard";
 import "./ClientCarousel.css";
-import left from '../../assets/left.png'
-import right from '../../assets/right.png'
+
+import arrow1 from '../../assets/arrow1.svg'
+import arrow2 from '../../assets/arrow2.svg'
 
 const ClientCarousel = () => {
     var testimonialslen = 6
@@ -34,7 +35,7 @@ function calculatePrevious(middle){
             <CarouselCard active={false} index={calculatePrevious(middle)}/>
             <div className="arrows">
                 
-                <img src={right} alt="" srcset="" className="change-slide" onClick={()=>setMiddle(calculatePrevious(middle))}/>
+                <img src={arrow1} alt="" srcset="" className="change-slide" onClick={()=>setMiddle(calculatePrevious(middle))}/>
             </div>    
         </div>
             }
@@ -49,7 +50,7 @@ function calculatePrevious(middle){
             <div onClick={()=>setMiddle(calculateNext(middle))}>
                 <CarouselCard active={false} index={calculateNext(middle)}/>
                 <div className="arrows2">
-                <img src={left} alt="" srcset="" className="change-slide" onClick={()=>setMiddle(calculateNext(middle))}/>
+                <img src={arrow2} alt="" srcset="" className="change-slide" onClick={()=>setMiddle(calculateNext(middle))}/>
             </div>
             </div>
         }

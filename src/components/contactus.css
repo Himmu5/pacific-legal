@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 30px 0px 100px 0px;
+    margin: 0px 0px  -45px;
     padding: 60px 60px;
   }
 
@@ -144,6 +144,7 @@ padding: 14px 38px 14px 38px;
 }
 
 .contact-box span {
+  background-color: #fbf4e6;
   font-family: Garamond-Bold;
   font-size: 20px;
   font-weight: 400;

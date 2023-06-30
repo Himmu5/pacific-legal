@@ -50,6 +50,7 @@ transition: 0.4s;
         align-items: center;
         gap: 12rem;
         margin-top: 5rem;
+        padding: 2rem;
         justify-content: space-evenly;
         margin-bottom: 12rem;
     }

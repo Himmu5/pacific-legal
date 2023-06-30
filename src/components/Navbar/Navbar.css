@@ -124,7 +124,7 @@ gap: 0.5rem;
 padding-left: 11rem;
 flex-direction: column;
 gap: 3rem;
-align-items: center;
+/* align-items: center; */
 background-color: #FFEFCC;
 position: fixed;
 padding-right: 15rem;
@@ -175,35 +175,41 @@ padding-top: 1rem;
 
 /* menu transition*/
 
-label {
+.check {
   display: flex;
   flex-direction: column;
-  width: 70px;
+  width: 31px;
+  height: 51px;
   cursor: pointer;
-  margin-left:-20px;
-}
+  margin-left: -14px;
+  margin-top: 20px;
 
+  gap: 3px;
+}
 label span {
   background: #fff;
   border-radius: 10px;
-  height: 7px;
-  margin: 7px 0;
+  height: 4px;
+  margin: 2px 0;
   transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-span:nth-of-type(1) {
+.nav-span:nth-of-type(1) {
+  width: 47%;
+  background: black;
+   /* height: 5px; */
+}
+
+.nav-span:nth-of-type(2) {
+  width: 97%;
+  background:black;
+  /* height: 5px; */
+}
+
+.nav-span:nth-of-type(3) {
   width: 50%;
   background: black;
-}
-
-span:nth-of-type(2) {
-  width: 100%;
-  background:black;
-}
-
-span:nth-of-type(3) {
-  width: 75%;
-  background: black;
+  /* height: 5px; */
 }
 
 input[type="checkbox"] {
@@ -212,16 +218,17 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked ~ span:nth-of-type(1) {
   transform-origin: bottom;
-  transform: rotatez(45deg) translate(8px, 0px);
+ 
+transform: rotatez(45deg) translate(7px, 2px);
 }
 
 input[type="checkbox"]:checked ~ span:nth-of-type(2) {
   transform-origin: top;
-  transform: rotatez(-45deg);
+  transform: rotatez(-45deg) translate(-1px, 2px);
+
 }
 
 input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   transform-origin: bottom;
-  width: 50%;
-  transform: translate(30px, -11px) rotatez(45deg);
-}
+  width: 52%;
+  transform: translate(13px, -5px) rotatez(45deg);}
