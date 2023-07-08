@@ -36,7 +36,7 @@ const CarouselCard = (props) => {
     
   return (
     <>
-      {props.active == false ? (
+      {props.active === false ? (
         <div
           className="carousel-card-cont"
           id="cont"

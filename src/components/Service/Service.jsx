@@ -6,7 +6,7 @@ function Service(props){
     return(
        <>
        <div className='servicetile' style={{"backgroundImage": "url("+url+")"}}>
-        <p className='servicetitle'>{title}</p>
+        <p className='servicetitle '>{title}</p>
        <div className='learn-more'>
        <CTAButton title="Learn more"/>
        </div>

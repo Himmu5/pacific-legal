@@ -63,7 +63,7 @@ function Home() {
       <div className="services">
         <div className="services-header">
         <h2 className="services-header-title">Our Services</h2>
-        <p>{ourservices}</p>
+        <p >{ourservices}</p>
 
         </div>
         <div className="services-tiles-parent">

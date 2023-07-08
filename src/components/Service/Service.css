@@ -7,8 +7,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0.5rem;
-    background-color: orange;
-    
+    background-color: orange;   
 }
 .servicetile:hover{
     filter: grayscale(100%);
@@ -16,6 +15,7 @@
 
 .servicetitle{
     /* background-color: orange; */
+
 text-align: start;
 margin-top: 2rem;
 margin-left: 2rem;

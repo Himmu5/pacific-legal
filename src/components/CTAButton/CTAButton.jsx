@@ -1,9 +1,8 @@
 import '../CTAButton/CTAButton.css'
 function CTAButton({title, handleClick}){
     return(
-        <button onClick={handleClick}>{title}</button>
+        <button onClick={handleClick} style={{ marginLeft: "-2px" }} className=''>{title}</button>
     )
-
 
 }
 
