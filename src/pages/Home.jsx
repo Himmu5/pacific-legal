@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import dawn from "../assets/Dawn.png";
 import "./Home.css";
-import {  Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CTAButton from "../components/CTAButton/CTAButton";
 import building from "../assets/building.png";
 import justice from "../assets/justice.png";
@@ -27,7 +27,7 @@ function Home() {
     "We work closely with clients to provide exceptional legal services that are catered specifically to their needs. Take a look at the services we offer, and get in touch today with any questions.";
   return (
     <>
-      <Navbar index={0}/>
+      <Navbar index={0} />
       <div className="home-header">
         <img className="dawn-bg" src={dawn} alt="" />
         <div className="header-content">
@@ -37,7 +37,9 @@ function Home() {
               <p className="company-subtitle">
                 Lawyers For Emerging And High Growth Companies.
               </p>
-              <Link to="/services"><CTAButton title="Services" /></Link>
+              <Link to="/services">
+                <CTAButton title="Services" />
+              </Link>
             </div>
             <div>
               <p>info@pacificlegal.ca</p>
@@ -54,7 +56,6 @@ function Home() {
         </div>
       </div>
 
-
       <div className="whoarewe">
         <h2>Who Are We?</h2>
         <p>{whoarewe}</p>
@@ -62,20 +63,40 @@ function Home() {
 
       <div className="services">
         <div className="services-header">
-        <h2 className="services-header-title">Our Services</h2>
-        <p >{ourservices}</p>
-
+          <h2 className="services-header-title">Our Services</h2>
+          <p>{ourservices}</p>
         </div>
         <div className="services-tiles-parent">
-        <Link to = "/commerical-contract" >  <Service title="Commercial Contract Review" url={service1} /></Link>
-        <Link to = "/public-company" >   <Service
-            title="Public Company Regulatory Compliance and Reporting"
-            url={service2}
-          /></Link>
-         <Link to = "/business-entity" >  <Service title="Terms of Service and Privacy Policy" url={service3} /></Link>
-         <Link to = "/corporate-immigration" >   <Service title="Corporate Immigration" url={service4} /></Link>
-         <Link to = "/general-corporate" >   <Service title="General Corporate Advisory" url={service5} /></Link>
-         <Link to = "/purchase-sale" >   <Service title="Purchase and Sale of Businesses" url={service6} /></Link>
+          <Link to="/commerical-contract">
+            {" "}
+            <Service title="Commercial Contract Review" url={service1} />
+          </Link>
+          <Link to="/public-company">
+            {" "}
+            <Service
+              title="Public Company Regulatory Compliance and Reporting"
+              url={service2}
+            />
+          </Link>
+          <Link to="/business-entity">
+            {" "}
+            <Service
+              title="Terms of Service and Privacy Policy"
+              url={service3}
+            />
+          </Link>
+          <Link to="/corporate-immigration">
+            {" "}
+            <Service title="Corporate Immigration" url={service4} />
+          </Link>
+          <Link to="/general-corporate">
+            {" "}
+            <Service title="General Corporate Advisory" url={service5} />
+          </Link>
+          <Link to="/purchase-sale">
+            {" "}
+            <Service title="Purchase and Sale of Businesses" url={service6} />
+          </Link>
         </div>
       </div>
 
@@ -87,29 +108,33 @@ function Home() {
       </div>
 
       <div className="clients">
-      <img className="dawn-bg" src={dawn} alt="" />
+        <img className="dawn-bg" src={dawn} alt="" />
 
-      <div className="client-content">
-      <h2 className="services-header-title">What Clients Say</h2>
-      <ClientCarousel/>
-      </div>
-     
+        <div className="client-content">
+          <h2 className="services-header-title">What Clients Say</h2>
+          <ClientCarousel />
+        </div>
       </div>
 
       <div className="getintouch">
-      <div className="getintouch-header">
-      <h2 className="services-header-title">Get In Touch</h2>
-      <p>Contact us and find out how our services can benefit your company.</p>
+        <div className="getintouch-header">
+          <h2 className="services-header-title">Get In Touch</h2>
+          <p>
+            Contact us and find out how our services can benefit your company.
+          </p>
+        </div>
+        <div className="getintouch-form">
+          <input type="text" name="" id="" placeholder="Name" />
+          <input type="text" name="" id="" placeholder="Email" />
+          <input type="text" name="" id="" placeholder="Phone" />
+          <input type="text" name="" id="" placeholder="Message" />
+          <CTAButton
+            title="Submit"
+            handleClick={() => console.log("nothing")}
+          />
+        </div>
       </div>
-      <div className="getintouch-form">
-        <input type="text" name="" id="" placeholder="Name"/>
-        <input type="text" name="" id="" placeholder="Email"/>
-        <input type="text" name="" id="" placeholder="Phone"/>
-        <input type="text" name="" id="" placeholder="Message"/>
-<CTAButton title="Submit" handleClick={()=>console.log("nothing")}/>
-      </div>
-      </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

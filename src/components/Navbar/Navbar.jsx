@@ -134,7 +134,8 @@ function Navbar(props) {
   }} />
   */}
             <div className="menu" >
-              <label className="check" >
+              <label className="check" style={{position: isMenuOpened ? "fixed": ""}} >
+
                 <input
                   type="checkbox"
                   id="check"

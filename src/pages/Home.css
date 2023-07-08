@@ -146,6 +146,24 @@ input {
   padding-left: 1rem;
   width: 50rem;
 }
+@media only screen and (min-width: 500px) {
+  input {
+    height: 3rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .services-tiles-parent {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .services-header {

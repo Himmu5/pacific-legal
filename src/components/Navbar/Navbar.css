@@ -105,6 +105,13 @@ input {
   flex-direction: column;
   gap: 0.5rem;
 }
+/* items-desktop */
+
+@media only screen and (max-width: 680px) {
+  .items-desktop{
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .companytitle {
