@@ -27,7 +27,7 @@ function TeamBody() {
 
         <div className="right-part">
           <h2 className="t-head">Avi Khanna</h2>
-          <h3 className="t-designation">
+          <h3 className="t-designation" >
             Founder & Principal: Corporate & Securities Law
           </h3>
           <p className="t-text">

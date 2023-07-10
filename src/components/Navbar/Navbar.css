@@ -113,6 +113,19 @@ input {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .nav-r1-c-all{
+    justify-content: space-between;
+  }
+  .right-content{
+    margin-left: 0.8rem;
+  }
+  .companytitle{
+    font-size: 5px;
+  }
+ 
+}
+
 @media only screen and (max-width: 600px) {
   .companytitle {
     font-family: "EB Garamond", serif;
@@ -156,7 +169,7 @@ input {
     align-items: left;
   }
   .menu {
-    width: 2rem;
+    width: 1rem;
     display: block;
   }
   .freeconsult-form {
@@ -187,7 +200,7 @@ input {
   width: 31px;
   height: 51px;
   cursor: pointer;
-  margin-left: -14px;
+  margin-left: -25px;
   margin-top: 20px;
   position: relative;
   z-index: 10;

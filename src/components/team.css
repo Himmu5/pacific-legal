@@ -63,7 +63,6 @@
 
 .contact-details p {
     font-family: Helvetica;
-    font-size: 24px;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0em;
@@ -131,26 +130,10 @@
 
 .t-text {
   margin: 32px 0px;
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0em;
+  
+  
   text-align: justify;
-
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 44px;
-  letter-spacing: 0em;
-  text-align: justify;
-
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: 0em;
-  text-align: justify;
+  
 }
 
 

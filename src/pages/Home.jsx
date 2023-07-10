@@ -34,11 +34,11 @@ function Home() {
           <div className="col1">
             <div>
               <h1 className="h1">Pacific Legal Welcomes You</h1>
-              <p className="company-subtitle">
+              <p  className="company-subtitle">
                 Lawyers For Emerging And High Growth Companies.
               </p>
-              <Link to="/services">
-                <CTAButton title="Services" />
+              <Link to="/services" style={{ marginLeft : -14 }}>
+                <CTAButton title="Services"    />
               </Link>
             </div>
             <div>
