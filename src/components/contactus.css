@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  /* margin: 30px 268px 100px 268px; */
-  margin: 30px 268px -50px 268px;
+  margin: 30px 268px 100px 268px;
+  margin: 30px 150px -50px 200px;
   padding: 90px 60px;
 }
 
@@ -69,7 +69,7 @@ padding: 14px 38px 14px 38px;
 
 @media only screen and (max-width: 600px) {
   .btn-send-message {
-    margin: -170px 0px 127px 0px;
+    /* margin: -170px 0px 127px 0px; */
   }
 
 }

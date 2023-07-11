@@ -168,7 +168,7 @@ function Navbar(props) {
           <motion.div
             initial={{ opacity: 0 }}
             variants={variants}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.5, z: 1 }}
             className="items "
             style={{ position: "fixed" }}
