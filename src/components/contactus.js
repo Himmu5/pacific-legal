@@ -70,8 +70,8 @@ function ContactUsBody() {
               placeholder="Type your message here"
             ></textarea>
           </div>
-        </div>
           <div className='btn-send-message'><button className="btn-message">Send Message</button></div>
+        </div>
         </div>
 
 
