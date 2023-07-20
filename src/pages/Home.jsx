@@ -124,10 +124,10 @@ function Home() {
           </p>
         </div>
         <div className="getintouch-form">
-          <input type="text" name="" id="" placeholder="Name" />
-          <input type="text" name="" id="" placeholder="Email" />
-          <input type="text" name="" id="" placeholder="Phone" />
-          <input type="text" name="" id="" placeholder="Message" />
+          <input type="text" name="" id="" placeholder="Name" style={{backgroundColor:"transparent", border:" 2px solid gray " }} autoComplete="off" />
+          <input type="text" name="" id="" placeholder="Email"  style={{backgroundColor:"transparent", border:" 2px solid gray " }}/>
+          <input type="text" name="" id="" placeholder="Phone" style={{backgroundColor:"transparent", border:" 2px solid gray " }}/>
+          <input type="text" name="" id="" placeholder="Message" style={{backgroundColor:"transparent", border:" 2px solid gray " }}/>
           <CTAButton
             title="Submit"
             handleClick={() => console.log("nothing")}

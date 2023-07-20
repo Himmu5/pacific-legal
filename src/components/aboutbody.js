@@ -73,7 +73,7 @@ function AboutBody() {
         </div>
 
         <div className="text-box"> 
-        <h2 className="A-head">About Us</h2>
+        <h2 className="A-head"></h2>
         <p className="A-text">
           Pacific Legal is dedicated to working with clients to help them achieve their business
           goals and overcome legal challenges anywhere in the world. From a global platform spanning 
