@@ -124,7 +124,7 @@ return(
          <div className="single-service-content">
          <img src={s6} alt="" className="corpbg-img" />
 
-         <h2 className="service-title">CORPORATE IMMIGRATION
+         <h2 className="service-title">
 </h2>
          <p className="service-subtitle">
 Pacific Legal provides advice and service for any and all Canadian corporate immigration matters We provide business immigration and offer a wide range of services and strategic advice to meet the needs of domestic and multinational clients Whether you need global immigration assistance for your executives, workers investors or entrepreneurs, either individually or in conjunction with their accompanying family members, our business Immigration team can efficiently and effectively coordinate and facilitate this complex process on your behalf.</p>

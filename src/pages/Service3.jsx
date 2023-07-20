@@ -124,7 +124,7 @@ return(
          <div className="single-service-content">
          <img src={s3} alt="" className="corpbg-img" />
 
-         <h2 className="service-title">PURCHASE AND SALE OF BUSINESS</h2>
+         <h2 className="service-title"></h2>
          <p className="service-subtitle">Pacific Legal has assisted clients in purchasing a business or selling a business in all areas of industry and commerce including choosing the proper vehicle and corporate structure for purchasing a business business assets, and liabilities ongoing liability to employees or creditors, security for deferred payments, representations and warranties, requirement and transferability of cerises, acquisition financing Regulatory Compliance and Licensing We handle every stage of the transaction including but to imited to letter of intent due diligence, the final agreement, and closing documents for transactions related to
 </p>
 

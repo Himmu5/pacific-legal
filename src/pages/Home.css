@@ -99,13 +99,13 @@
   background-color: #ffefcc;
   overflow: hidden;
   position: relative;
-  height: 40rem;
+  height: 45rem;
   width: 100%;
 }
 
 .client-content {
   position: relative;
-  height: 40rem;
+  height: 45rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -114,6 +114,7 @@
 }
 
 .getintouch {
+  margin-top: 0vh;
   height: max-content;
   background-image: url("../assets/justice-faded.png");
   background-repeat: no-repeat;
@@ -155,6 +156,7 @@ input {
     padding-left: 1rem;
     width: 30rem;
   }
+  
 }
 @media only screen and (max-width: 1024px) {
   .services-tiles-parent {

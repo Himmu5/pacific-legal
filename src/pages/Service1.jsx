@@ -124,7 +124,7 @@ return(
          <div className="single-service-content">
          <img src={s1} alt="" className="corpbg-img" />
 
-         <h2 className="service-title">COMMENCING A BUSINESS ENTITY</h2>
+         <h2 className="service-title"></h2>
          <p className="service-subtitle">When starting a new business venture, entrepreneurs should make sure they're complying with ad the legal obligations of running a small business. You may have a terrific new business idea, but to get your startup off the ground you first must make sure you comply with all the legal requirements involved in starting a business Pacific Legal business law group is fully equipped to provide you services such as
 
 Name searches and registrations

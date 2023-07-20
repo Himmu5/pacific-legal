@@ -124,7 +124,7 @@ return(
          <div className="single-service-content">
          <img src={corpbg} alt="" className="corpbg-img" />
 
-         <h2 className="service-title">General Corporate Advisory</h2>
+         <h2 className="service-title"></h2>
          <p className="service-subtitle">Pacific Legal takes great pride in representing clients at all stages of their business cycle, and offer legal and strategic advice to our clients and structure, negotiate and implement all manner of business transactions on their behalf, such as:</p>
 
          <ul>

@@ -124,7 +124,7 @@ return(
          <div className="single-service-content">
          <img src={s4} alt="" className="corpbg-img" />
 
-         <h2 className="service-title">COMMERCIAL CONTRACTS</h2>
+         <h2 className="service-title"></h2>
          <p className="service-subtitle">
 Achieve Your Goals
 

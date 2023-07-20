@@ -31,7 +31,7 @@ font-size: 1rem;
 @media only screen and (max-width: 600px) {
     .carousel-card-cont{
         width: 70vw;
-        height: 130vw;
+        height: 150vw;
         /* height: fit-content; */
         background-color: white;
         border-radius: 0.8rem;

@@ -125,7 +125,7 @@ Public Company Regulatory Compliance and Reporting"/>
          <div className="single-service-content">
          <img src={s5} alt="" className="corpbg-img" />
 
-         <h2 className="service-title">PUBLIC COMPANY REGULATORY COMPLIANCE AND REPORTING</h2>
+         <h2 className="service-title"></h2>
          <p className="service-subtitle">
 Regulatory standards are constantly changing, making compliance complex and time-consuming Failing to comply puts you and your organization at risk for substantial fees, not to mention severe harm to your reputation Pacific Legal helps public companies comply with complex regulatory requirements, information security issues growing shareholder expectations private placements financing) organizing annual general meetings privacy matters, and investor relations.</p>
         
