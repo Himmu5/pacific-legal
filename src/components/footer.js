@@ -71,7 +71,7 @@ function Footer() {
             <ul className="f-list">
               <li>
                 {" "}
-                Phone <br /> 8888888888
+                Phone <br />+1 (416) 688-5567
               </li>
               <br />
               <li>

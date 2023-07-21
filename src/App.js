@@ -21,6 +21,7 @@ import Login from "./admin/pages/Login";
 import AddBlog from "./admin/pages/AddBlog";
 import SingleBlog from "./components/SingleBlog";
 function App() {
+  // "federatedId": "test@admin.com"
   return (
     <BrowserRouter>
       <Routes>

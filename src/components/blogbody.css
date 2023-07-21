@@ -22,9 +22,9 @@
     margin-right: 10rem;
     /* padding-bottom: 10rem; */
     justify-content: center;
-    row-gap: 15rem;
+    row-gap: 3rem;
     column-gap: 3rem;
-    margin-bottom: 15rem;
+    margin-bottom: 3rem;
     /* margin-top: 2rem; */
     /* margin-bottom: 12rem; */
 }
@@ -48,7 +48,9 @@ transition: 0.4s;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 12rem;
+        gap: 5rem;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-top: 5rem;
         padding: 2rem;
         justify-content: space-evenly;
