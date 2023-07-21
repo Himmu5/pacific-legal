@@ -114,6 +114,7 @@ class BlogDataService {
 
   getBlog= (id) => {
     const blogDoc = doc(db, "blogs", id);
+    console.log(" Blog :", blogDoc);
     return getDoc(blogDoc);
   };
 

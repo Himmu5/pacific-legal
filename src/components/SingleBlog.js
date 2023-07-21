@@ -19,11 +19,13 @@ import Bcards from "./Bcards/Bcards";
 import Footer from "./footer";
 import Hero from "./Hero/Hero";
 import Navbar from "./Navbar/Navbar";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import Modal from 'react-modal';
 import close from '../assets/close.png';
 import BlogDataService from '../admin/backend/firestore'
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../admin/backend/firebase";
 
 
 function SingleBlog() {
@@ -63,7 +65,7 @@ function SingleBlog() {
     };
 
     const queryParameters = new URLSearchParams(window.location.search)
-    const id = queryParameters.get("id")
+    const id = useParams().id;
     // console.log("id is ", id);
 
     const [btitle, setBtitle] = useState(null);
@@ -74,11 +76,19 @@ function SingleBlog() {
     const [bcontent, setBcontent] = useState(null);
     const [imgurl, setImgurl] = useState(null)
 
+    console.log("Data : ",id , burl , bauthor , bdate , btime , bcontent , imgurl);
 
+    // const t = doc(db , "blogs" , id)
+    // getDoc(t).then((res)=>{
+    //   console.log("res " , res.data());
+    // }).catch((err)=>{
+    //   console.log("err :", err);
+    // })
 
     const getSingleBlog = async (id) => {
         const data = await BlogDataService.getBlog(id);
-        console.log(data.data());
+
+        console.log(data);
         if(data.data()!=undefined){
             const blogData = data.data();
             console.log("not null");
@@ -96,10 +106,15 @@ function SingleBlog() {
         }
         // setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
       };
+      const ref = useRef(null);
+      const handleClick = () => {
+        ref.current?.scrollIntoView({behavior: 'smooth'});
+      };
 
     useEffect(()=>{
         getSingleBlog(id);
-    }, [])
+        handleClick();
+    }, [id])
   return (
     <>
 
@@ -158,6 +173,7 @@ function SingleBlog() {
         <Hero title={btitle}/>
       <div className="Medical-body">
         <div className="b1">
+          <div ref={ref}></div>
            <img className="m-image" src={imgurl} alt="MedicalBody-Image" />
         </div>
 
@@ -182,8 +198,8 @@ function SingleBlog() {
           
 
           <div className="body">
-            <p>
-               {bcontent}
+            <p dangerouslySetInnerHTML={{ __html: bcontent }}>
+               {/* {bcontent}  */}
                   </p>
           </div>
 

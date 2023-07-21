@@ -66,7 +66,23 @@ function AddBlog(){
         const [category, setCategory] = useState(null); 
         const [tags, setTags] = useState(null);
         const [message, setMessage] = useState({ error: false, msg: "" });
-
+        const newBlog = {
+          imgUrl,
+         name,
+         time,
+         date,
+         btitle,
+         bcontent,
+         mtitle,
+         mtag,
+         mdesc,
+         slugs,
+         excrept,
+         category,
+         tags,
+         hidden
+        };
+        console.log(newBlog); 
        
   const handleSubmit = async (url) => {
     console.log("working")
@@ -133,6 +149,7 @@ function AddBlog(){
       setBtitle(event.target.value);
     }
     function handleChangebcontent(event){
+      console.log(event);
       setBcontent(event.target.value);
     }
     function handleChangemtitle(event){
@@ -249,7 +266,7 @@ function AddBlog(){
             </div>
             <div className='editblogcontent'>
                 <h4>Blog Content</h4>
-                <ReactQuill theme="snow" value={bcontent} onChange={() => setBcontent} />
+                <ReactQuill theme="snow" value={bcontent} onChange={setBcontent} />
 
                 {/* <textarea className='admin-bcontent-input' placeholder='Type Here..' value={bcontent} onChange={handleChangebcontent}></textarea>
              */}

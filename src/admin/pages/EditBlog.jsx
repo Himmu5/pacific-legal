@@ -230,7 +230,7 @@ const EditBlog = ({ id, setBlogId })=>{
             </div>
             <div className='editblogcontent'>
                 <h4>Blog Content</h4>
-                <ReactQuill theme="snow" value={bcontent} onChange={() => setBcontent} />
+                <ReactQuill theme="snow" value={bcontent} onChange={setBcontent} />
 
                 {/* <textarea className='admin-bcontent-input' placeholder='Type Here..' value={bcontent} onChange={handleChangebcontent}></textarea>
              */}
