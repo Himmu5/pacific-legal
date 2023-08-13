@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
+import Logo from '../../assets/newLogos/pacificblack.png'
 import CTAButton from "../CTAButton/CTAButton";
 import { Link, useNavigate } from "react-router-dom";
 import menu from "../../assets/menu.png";
@@ -122,7 +123,7 @@ function Navbar(props) {
       <div className="nav-r1-c-all">
         <div className="nav-r1-c1">
           <img
-            src={logo}
+            src={Logo}
             alt=""
             className="logo"
             onClick={() => {
