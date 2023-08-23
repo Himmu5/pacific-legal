@@ -1,5 +1,5 @@
 import "./footer.css";
-import Fimage from "../assets/logo.png";
+import Fimage from "../assets/newLogos/pacificblack.png";
 import Fface from "../assets/footerfacebook.png";
 import Finsta from "../assets/footerinsta.png";
 import Flinkd from "../assets/footerlinkedin.png";
