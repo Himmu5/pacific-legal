@@ -55,10 +55,10 @@ const CarouselCard = (props) => {
         <div
           className="carousel-card-cont"
           id="cont"
-          style={{ transform: "scale(1)" }}
+          style={{ transform: "scale(1)" , display : "flex" , flexDirection : "column" , justifyContent : "space-between"}}
         >
           <div className="carousel-text">
-            <p>
+            <p >
             {testimonials[props.index]["text"]}
             </p>
           </div>

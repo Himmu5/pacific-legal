@@ -5,7 +5,7 @@ function Hero(props){
     return(
         <>
         <div className='hero-parent'>
-            <h1>{props.title}</h1>
+            <h1>{props.title} </h1>
         </div>
 
         </>
